@@ -494,10 +494,13 @@ header #nav nav{
 .swiper{
   margin-bottom: 63px;
 }
+picture{
+  display: inline-block;
+  height: 0;
+}
 .swiper .banner,
 .swiper .microsoft-banner{
   position: relative;
-  margin-bottom: 15px;
 }
 .swiper .banner .title{
   position: absolute;
@@ -660,7 +663,6 @@ header #nav nav{
   .swiper .banner,
   .swiper .microsoft-banner{
     position: static;
-    margin-bottom: 20px;
   }
   .swiper .banner .banner-title,
   .swiper .microsoft-banner .banner-title{
@@ -703,32 +705,32 @@ header #nav nav{
   }
 }
 
-.content{
+#container .content{
   width: 100%;
   padding: 0 8%;
   
 }
-.content .choose{
+#container .content .choose{
   display: flex;
   justify-content: center;
   margin-bottom: 63px;
 }
-.content .choose li img{
+#container .content .choose li img{
   width: 40px;
 }
-.content .choose li{
+#container .content .choose li{
   margin: 16px 24px;
   text-align: center;
 }
-.content .choose li div{
+#container .content .choose li div{
   margin-bottom: 2px;
 }
-.content .choose li a{
+#container .content .choose li a{
   color: #0067c7;
   font-weight: 600;
   position: relative;
 }
-.content .choose li a:focus::before{
+#container .content .choose li a:focus::before{
   content: '';
   position: absolute;
   top: -5px;
@@ -737,23 +739,28 @@ header #nav nav{
   right: -4px;
   border: 3px dotted #0067c7;
 }
+@media (max-width: 1800px){
+  #container .content{
+    padding: 0 5%;
+  }
+}
 @media (max-width: 1083px){
-  .content{
+  #container .content{
     padding: 0;
   }
 }
 @media (max-width: 859px){
-  .content .choose{
+  #container .content .choose{
     margin-bottom: 15px;
   }
 }
 @media (max-width: 601px){
-  .content .choose{
+  #container .content .choose{
     flex-wrap: wrap;
   }  
 }
 @media (max-width: 384px){
-  .content .choose{
+  #container .content .choose{
     flex-direction: column;
     margin-bottom: 20px;
   }
