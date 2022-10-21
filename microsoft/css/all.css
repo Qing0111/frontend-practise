@@ -1,0 +1,1207 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Segoe UI',SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.5;
+}
+header #nav nav{
+  width: 100%;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  font-size: 13px;
+  color: #000;
+  margin-bottom: 2px;
+  position: relative;
+  
+}
+#nav #burger-menu{
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+#nav .logo-nav{
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+#nav .logo-nav .logo{
+  display: inline-block;
+  width: 137px;
+  padding: 16px 6px 19px 10px;
+}
+#nav .logo-nav .logo img{
+  width: 108px;
+  vertical-align: middle;
+}
+#nav .logo-nav .list{
+  display: flex;
+}
+#nav .logo-nav .list .more{
+  display: none;
+}
+#nav .logo-nav .list li a{
+  display: inline-block;
+  margin-top: 1px;
+  padding: 16px 10px 15px 11px;
+  text-decoration: none;
+  color: #262626;
+  font-size: 13px;
+}
+/* #nav .logo-nav .list li a span,
+#nav .microsoft-search .all .all-btn label span,
+#nav .microsoft-search .search span,
+#nav .user-info .shop span,
+#nav .microsoft-search .drop-down-menu li a span,
+#nav .logo-nav .list li a span{
+  border-bottom: 2px solid transparent;
+} */
+#nav .logo-nav .list li a:hover span,
+#nav .microsoft-search .all .all-btn label:hover span,
+#nav .microsoft-search .search:hover span,
+#nav .user-info .shop:hover span,
+#nav .microsoft-search .drop-down-menu li a:hover span,
+#nav .logo-nav .list li a:focus span,
+#nav .microsoft-search .all .all-btn label:focus span,
+#nav .microsoft-search .search:focus span,
+#nav .user-info .shop:focus span,
+#nav .microsoft-search .drop-down-menu li a:focus span{
+  border-bottom: 2px solid #000;
+}
+#nav .logo-nav .list li a,
+#nav .microsoft-search .all .all-btn label,
+#nav .microsoft-search .search,
+#nav .user-info .shop,
+#nav .personal,
+#nav .microsoft-search .drop-down-menu li a{
+  position: relative;
+}
+#nav .logo-nav .list li a:focus::after,
+#nav .microsoft-search .drop-down-menu li a:focus::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px dashed #000;
+}
+#nav .microsoft-search .all .all-btn label:focus::after,
+#nav .microsoft-search .search:focus::after,
+#nav .user-info .shop:focus::after,
+#nav .personal:focus::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px dashed #000;
+}
+
+#nav .microsoft-search{
+  display: flex;
+  margin-right: 20px;
+}
+#nav .microsoft-search .all .all-btn label{
+  display: inline-block;
+  padding: 16px 5px 16px 15px;
+  cursor: pointer;
+}
+#nav .microsoft-search .all .all-btn label .fa-bars,
+#nav .microsoft-search .all .all-btn label .fa-xmark{
+  display: none;
+}
+#nav #burger-menu:checked ~ .microsoft-search .drop-down-menu{
+  display: flex;
+}
+#nav #burger-menu:checked ~ .microsoft-search .all-btn label{
+  background-color: #f2f2f2;
+}
+#nav #burger-menu:checked ~ .microsoft-search .all-btn label span{
+  border-bottom: none;
+}
+#nav .microsoft-search .all i{
+  font-size: 12px;
+}
+
+#nav .microsoft-search .drop-down-menu{
+  position: absolute;
+  width: 1228px;
+  top: 53px;
+  left: 50%;
+  transform: translateX(-41.5%);
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 2;
+  padding-top: 1px;
+  background-color: #f2f2f2;
+  display: none;
+  border: 1px solid rgb(223, 221, 221);
+}
+#nav .microsoft-search .drop-down-menu > li{
+  padding-bottom: 10px;
+}
+#nav .microsoft-search .drop-down-menu > li:last-child{
+  padding-bottom: 0;
+}
+#nav .microsoft-search .drop-down-menu .mobile-menu{
+  display: none;
+}
+#nav .microsoft-search .drop-down-menu > li a{
+  width: 195px;
+  padding: 12px 0 12px 24px;
+}
+@media (max-width: 1399px){
+  #nav .microsoft-search .drop-down-menu{
+    width: 1213px;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 1229px){
+  #nav .microsoft-search .drop-down-menu{
+    width: 1025px;
+  }
+}
+@media (max-width: 1024px){
+  #nav .microsoft-search .drop-down-menu{
+    width: 820px;
+  }
+}
+#nav .microsoft-search .drop-down-menu > li h4{
+  padding: 18px 0 18px 24px;
+}
+#nav .microsoft-search .drop-down-menu > li ul li a{
+  display: inline-block;
+  padding: 12px 0 12px 24px;
+  color: #262626;
+  text-decoration: none;
+}
+#nav .microsoft-search .drop-down-menu > li:last-child{
+  width: 100%;
+  text-align: center;
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #000;
+}
+#nav .microsoft-search .drop-down-menu > li:last-child a{
+  display: inline-block;
+  padding: 8px 0 8px 24px;
+  text-decoration: none;
+  color: #262626;
+}
+#nav .microsoft-search .drop-down-menu > li h4 i{
+  display: none;
+}
+#nav .microsoft-search .search{
+  padding: 15px 9px 16px;
+}
+#nav .microsoft-search .search i,
+#nav .user-info .shop i{
+  font-size: 16px;
+}
+#nav .microsoft-search .search,
+#nav .user-info .shop,
+#nav .user-info .personal{
+  cursor: pointer;
+}
+#nav .user-info{
+  display: flex;
+}
+#nav .user-info .shop{
+  padding: 15px 9px 16px;
+}
+#nav .user-info .personal{
+  display: flex;
+}
+#nav .user-info .personal .login{
+  padding: 15px 11px 16px 9px;
+}
+#nav .user-info .personal .user{
+  margin-right: 8px;
+  padding: 8px 0px 0px;
+  width: 32px;
+}
+#nav .user-info .personal .user img{
+  width: 100%;
+}
+#nav .microsoft-search .drop-down-menu #software,
+#nav .microsoft-search .drop-down-menu #computer,
+#nav .microsoft-search .drop-down-menu #entertainment,
+#nav .microsoft-search .drop-down-menu #business,
+#nav .microsoft-search .drop-down-menu #develop,
+#nav .microsoft-search .drop-down-menu #other{
+  position: absolute;
+  opacity: 0;
+}
+@media (max-width: 1800px){
+  header #nav nav{
+    padding: 0 5%;
+  }
+}
+@media (max-width: 1399px){
+  #nav .microsoft-search .search span,
+  #nav .user-info .shop span,
+  #nav .user-info .personal .login{
+    display: none;
+  }
+  #nav .microsoft-search .all .all-btn label{
+    margin-right: 10px;
+  }
+  #nav .microsoft-search{
+    margin-right: 0;
+  }
+  #nav .user-info .shop{
+    margin-right: 10px;
+  }
+}
+@media (max-width: 1083px){
+  header #nav nav{
+    padding: 0 2.3%;
+  }
+}
+@media (max-width: 900px){
+  #nav .logo-nav .list .more-hide{
+    display: none;
+  }
+  #nav .logo-nav .list .more{
+    display: block;
+    position: relative;
+  }
+  #nav .logo-nav .list .more label:hover span{
+    border-bottom: 2px solid #000;
+  }
+  #nav .logo-nav .list .more #more-menu{
+    position: absolute;
+    z-index: -2;
+    opacity: 0;
+  }
+  #nav .logo-nav .list .more label{
+    display: inline-block;
+    padding: 16px 10px 15px 11px;
+    margin-top: 1px;
+    cursor: pointer;
+  }
+  #nav .logo-nav .list .more .more-list{
+    position: absolute;
+    width: 168px;
+    top: 100%;
+    left: 0;
+    background-color: #f2f2f2;
+    display: none;
+    border-bottom: 2px solid #000;
+    z-index: 2;
+  }
+  #nav .logo-nav .list .more #more-menu:checked ~ .more-list{
+    display: block;
+  }
+  #nav .logo-nav .list .more #more-menu:checked + label{
+    background-color: #f2f2f2;
+  }
+  #nav .logo-nav .list .more #more-menu:checked + label:hover span{
+    border-bottom: none;
+  }
+  #nav .logo-nav .list .more .more-list li a{
+    display: inline-block;
+    padding: 18px 118px 18px 24px;
+  }
+  #nav .logo-nav .list .more .more-list li a:hover{
+    background-color: #e6e6e6;
+  }
+}
+@media (max-width: 859px){
+  header #nav nav{
+    padding: 0;
+    margin-bottom: 0;
+  }
+  #nav .logo-nav .logo{
+    padding: 12px 14px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  #nav .logo-nav .list li a,
+  #nav .logo-nav .list .more{
+    display: none;
+  }
+  #nav .microsoft-search{
+    width: 100%;
+    margin-right: auto;
+  }
+  #nav .microsoft-search .all .all-btn label{
+    padding: 9px 9px 0 15px;
+    width: 48px;
+    margin-right: 0;
+  }
+  #nav .microsoft-search .all .all-btn label .fa-bars{
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 23px;
+  }
+  #nav .microsoft-search .all .all-btn label .all-microsoft,
+  #nav .microsoft-search .all .all-btn label i{
+    display: none;
+  }
+  #nav #burger-menu:checked ~ .microsoft-search .all-btn label{
+    background-color: transparent;
+    border: 0;
+  }
+  #nav #burger-menu:checked ~ .microsoft-search .all-btn label .fa-bars{
+    display: none;
+  }
+  #nav #burger-menu:checked ~ .microsoft-search .all .all-btn label .fa-xmark{
+    display: block;
+    margin-top: 5px;
+    font-size: 25px;
+  }
+  #nav .microsoft-search .drop-down-menu > li{
+    padding-bottom: 0;
+  }
+  #nav .microsoft-search .drop-down-menu li a,
+  #nav .microsoft-search .drop-down-menu li a span{
+    border-bottom: 0;
+  }
+  #nav .microsoft-search .drop-down-menu{
+    width: 100%;
+    left: 0;
+    transform: translateY(0px);
+    flex-direction: column;
+  }
+  #nav .microsoft-search .drop-down-menu > li{
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  #nav .microsoft-search .drop-down-menu .mobile-menu{
+    display: block;
+
+  }
+  #nav .microsoft-search .drop-down-menu .mobile-menu a{
+    display: block;
+    padding: 15px 24px 14px 14px;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    width: 100%;
+    margin: 1px;
+  }
+  #nav .microsoft-search .drop-down-menu > li h4{
+    font-size: 15px;
+    font-weight: normal;
+    padding: 15px 24px 14px 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1px;
+  }
+  #nav .microsoft-search .drop-down-menu > li h4 i{
+    display: block;
+  }
+  #nav .microsoft-search .drop-down-menu > li ul{
+    display: none;
+  }
+  #nav .microsoft-search .drop-down-menu > li:last-child{
+    text-align: start;
+    background-color: #f2f2f2;
+    padding: 15px 24px 14px 14px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 1px;
+  }
+  #nav .microsoft-search .drop-down-menu > li:last-child a{
+    padding: 0;
+  }
+  #nav .user-info .shop{
+    padding: 15px 20px 16px;
+  }
+  #nav .user-info .personal .user{
+    margin-right: 14px;
+    padding: 9px 0px 0px;
+    width: 32px;
+  }
+  #nav .microsoft-search .drop-down-menu #software:checked ~ ul,
+  #nav .microsoft-search .drop-down-menu #computer:checked ~ ul,
+  #nav .microsoft-search .drop-down-menu #entertainment:checked ~ ul,
+  #nav .microsoft-search .drop-down-menu #business:checked ~ ul,
+  #nav .microsoft-search .drop-down-menu #develop:checked ~ ul,
+  #nav .microsoft-search .drop-down-menu #other:checked ~ ul{
+    display: block;
+    padding: 1px 0 0 30px;
+  }
+
+  #nav .microsoft-search .drop-down-menu #software:checked ~ label h4 i,
+  #nav .microsoft-search .drop-down-menu #computer:checked ~ label h4 i,
+  #nav .microsoft-search .drop-down-menu #entertainment:checked ~ label h4 i,
+  #nav .microsoft-search .drop-down-menu #business:checked ~ label h4 i,
+  #nav .microsoft-search .drop-down-menu #develop:checked ~ label h4 i,
+  #nav .microsoft-search .drop-down-menu #other:checked ~ label h4 i{
+    transform: scaleY(-1);
+  }
+  #nav .microsoft-search .drop-down-menu #software ~ ul li a,
+  #nav .microsoft-search .drop-down-menu #computer ~ ul li a,
+  #nav .microsoft-search .drop-down-menu #entertainment ~ ul li a,
+  #nav .microsoft-search .drop-down-menu #business ~ ul li a,
+  #nav .microsoft-search .drop-down-menu #develop ~ ul li a,
+  #nav .microsoft-search .drop-down-menu #other ~ ul li a{
+    display: block;
+    width: 100%;
+    padding: 16px 15px 15px 14px;
+    position: relative;
+    font-size: 15px;
+    margin: 1px;
+  }
+  #nav .microsoft-search .drop-down-menu #software ~ ul li:first-child a:before,
+  #nav .microsoft-search .drop-down-menu #computer ~ ul li:first-child a:before,
+  #nav .microsoft-search .drop-down-menu #entertainment ~ ul li:first-child a:before,
+  #nav .microsoft-search .drop-down-menu #business ~ ul li:first-child a:before,
+  #nav .microsoft-search .drop-down-menu #develop ~ ul li:first-child a:before,
+  #nav .microsoft-search .drop-down-menu #other ~ ul li:first-child a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    right: 0;
+    border-top: 1px solid #e6e6e6;
+  }
+  #nav .microsoft-search .drop-down-menu #software ~ ul li a::before, 
+  #nav .microsoft-search .drop-down-menu #computer ~ ul li a::before,
+  #nav .microsoft-search .drop-down-menu #entertainment ~ ul li a::before,
+  #nav .microsoft-search .drop-down-menu #business ~ ul li a::before,
+  #nav .microsoft-search .drop-down-menu #develop ~ ul li a::before,
+  #nav .microsoft-search .drop-down-menu #other ~ ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #e6e6e6;
+  }
+  #nav .microsoft-search .drop-down-menu li a:hover span,
+  #nav .microsoft-search .drop-down-menu li a:focus span{
+    border-bottom: none;
+  }
+}
+
+
+
+.swiper{
+  margin-bottom: 63px;
+}
+.swiper .banner,
+.swiper .microsoft-banner{
+  position: relative;
+  margin-bottom: 15px;
+}
+.swiper .banner .title{
+  position: absolute;
+  width: 31%;
+  top: 50%;
+  left: 60.2%;
+  transform: translateY(-51.5%);
+}
+.swiper .microsoft-banner .title{
+  position: absolute;
+  width: 31%;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-51.5%);
+}
+.swiper .banner .title span{
+  display: inline-block;
+  padding: 2px 12px;
+  margin-bottom: 2px;
+  background-color: #feb72f;
+  font-weight: 600;
+}
+.swiper .banner .title h1,
+.swiper .microsoft-banner .title h2{
+  font-weight: 600;
+  font-size: 37px;
+  margin-bottom: 14.5px;
+}
+.swiper .banner .title p,
+.swiper .microsoft-banner .title p{
+  margin-bottom: 24px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.swiper .banner .title a{
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #046ab5;
+  font-weight: 800;
+  color: #f9fbfd;
+  text-decoration: none;
+  position: relative;
+}
+.swiper .microsoft-banner .title .one-use{
+  display: inline-block;
+  background-color: #046ab5;
+  padding: 10px 12px;
+  margin: 8px 16px 8px 0;
+  color: #f9fbfd;
+  text-decoration: none;
+  position: relative;
+}
+.swiper .microsoft-banner .title .six-use{
+  display: inline-block;
+  color: #046ab5;
+  font-weight: 600;
+  padding: 8px 21px 8px 0;
+  position: relative;
+}
+.swiper .banner .title a:focus::before,
+.swiper .microsoft-banner .title .one-use:focus::before{
+  content: '';
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  border: 3px dotted #f9fbfd;
+}
+.swiper .microsoft-banner .title .six-use:focus::before{
+  top: -5px;
+  bottom: -5px;
+  left: -3px;
+  right: 12px;
+  border: 3px dotted #046ab5;
+}
+.swiper .banner .title a:hover,
+.swiper .microsoft-banner .title a:hover{
+  background-color: #045fa3;
+}
+.swiper .microsoft-banner .title .six-use:hover{
+  background-color: transparent;
+}
+
+
+.swiper .microsoft-banner .title .six-use i{
+  margin-left: 5px;
+  transition: transform .3s;
+}
+.swiper .microsoft-banner .title .six-use:hover i{
+  transform: translateX(5px);
+}
+.swiper .microsoft-banner .title .six-use:hover::after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  left: 0;
+  right: 38px;
+  bottom: 12px;
+  background-color: #045fa3;
+}
+
+.swiper .swipe-btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 53px;
+}
+.swiper .swipe-btn button{
+  border: 0;
+  background-color: transparent;
+  font-size: 28px;
+  padding: 0 8px;
+  cursor: pointer;
+  position: relative;
+}
+.swiper .swipe-btn button:focus:before{
+  content: '';
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -8px;
+  right: -8px;
+  border: 3px dotted #000;
+}
+.swiper .swipe-btn button .fa-chevron-left,
+.swiper .swipe-btn button .fa-chevron-right{
+  transition: transform .3s;
+}
+.swiper .swipe-btn button:hover .fa-chevron-left{
+  transform: translateX(-8px);
+}
+.swiper .swipe-btn button:hover .fa-chevron-right{
+  transform: translateX(8px);
+}
+.swiper .swipe-btn .dot{
+  width: 80px;
+  /* text-align: center; */
+  /* font-size: 20px; */
+}
+.swiper-pagination-bullet{
+  background-color: #000;
+}
+.swiper-pagination-bullets{
+  width: 0;
+}
+.swiper-pagination{
+  /* z-index: -1; */
+  position: static;
+  width: 100px;
+}
+@media (max-width: 1399px){
+  .swiper .banner .title h1,
+  .swiper .microsoft-banner .title h2{
+    font-size: 29px;
+  }
+}
+@media (max-width: 1083px){
+  .swiper .banner,
+  .swiper .microsoft-banner{
+    position: static;
+    margin-bottom: 20px;
+  }
+  .swiper .banner .banner-title,
+  .swiper .microsoft-banner .banner-title{
+    padding: 0 12px;
+  }
+  .swiper .banner .title span{
+    margin-bottom: 4px;
+  }
+  .swiper .banner .title,
+  .swiper .microsoft-banner .title{
+    position: static;
+    width: 100%;
+    padding: 48px;
+    background-color: #fff;
+    box-shadow: .5px 2px 3px #ccc,
+                -.8px -.5px 3px #ccc;
+    transform: translateY(0px);
+    margin-top: -53px;
+  }
+  .swiper .banner .title h1,
+  .swiper .microsoft-banner .title h2{
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 859px){
+  .swiper{
+    margin-bottom: 20px;
+  }
+  .swiper .banner .banner-title,
+  .swiper .microsoft-banner .banner-title{
+    padding: 0;
+  }
+  .swiper .banner .title,
+  .swiper .microsoft-banner .title{
+    position:static;
+    padding: 24px 24px 16px 24px;
+    margin-top: -6px;
+    
+  }
+}
+
+.content{
+  width: 100%;
+  padding: 0 8%;
+  
+}
+.content .choose{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 63px;
+}
+.content .choose li img{
+  width: 40px;
+}
+.content .choose li{
+  margin: 16px 24px;
+  text-align: center;
+}
+.content .choose li div{
+  margin-bottom: 2px;
+}
+.content .choose li a{
+  color: #0067c7;
+  font-weight: 600;
+  position: relative;
+}
+.content .choose li a:focus::before{
+  content: '';
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -4px;
+  right: -4px;
+  border: 3px dotted #0067c7;
+}
+@media (max-width: 1083px){
+  .content{
+    padding: 0;
+  }
+}
+@media (max-width: 859px){
+  .content .choose{
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 601px){
+  .content .choose{
+    flex-wrap: wrap;
+  }  
+}
+@media (max-width: 384px){
+  .content .choose{
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+.main-card{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.main-card .card{
+  width: calc((100% - 72px) / 4);
+  cursor: pointer;
+}
+.main-card .card .card-header {
+  padding-top: 10px;
+}
+.main-card .card .card-header span{
+  display: inline-block;
+  padding: 2px 12px;
+  background-color: #feb72f;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.main-card .card .card-header .null{
+  display: inline-block;
+  font-size: 0;
+  padding: 11px 0;
+}
+.main-card .card .card-body h3{
+  font-weight: 600;
+  font-size: 29px;
+  margin-bottom: 10px;
+}
+.main-card .card .card-body p{
+  margin-bottom: 8px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.main-card .card .card-footer a{
+  display: inline-block;
+  padding: 16px 0;
+  color: #0067b8;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+.main-card .card .card-footer a:focus::before{
+  content: '';
+  position: absolute;
+  top: 13px;
+  bottom: 13px;
+  left: -3px;
+  right: -7px;
+  border: 3px dotted #0067b8;
+}
+.main-card .card .card-footer a:hover::after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  bottom: 20px;
+  left: 0;
+  right: 17px;
+  background-color: #0067b8;
+}
+.main-card .card .card-footer a i{
+  padding-left: 5px;
+  transition: transform .3s;
+}
+.main-card .card .card-footer a:hover i{
+  transform: translateX(3px);
+}
+@media (max-width: 1800px){
+  .content{
+    padding: 0 5%;
+  }
+}
+@media (max-width: 1399px){
+  .main-card .card .card-body h3{
+    font-size: 24px;
+  }
+}
+@media (max-width: 1083px){
+  .main-card{
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    padding: 0 12px;
+  }
+  .main-card .card{
+    width: calc((100% - 24px) / 2);
+    padding-bottom: 10px;
+  }
+  .main-card .card .card-body h3{
+    font-size: 21px;
+    margin-bottom: 4px;
+    margin-top: 1px;
+  }
+}
+@media (max-width: 539px){
+  .main-card .card{
+    width: 100%;
+    padding-bottom: 10px;
+  }
+}
+.one-drive{
+  position: relative;
+  margin-bottom: 80px;
+}
+.one-drive .one-drive-title{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 6.7%;
+  width: 25%;
+}
+.one-drive .one-drive-title h2{
+  font-size: 37px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.one-drive .one-drive-title p{
+  margin-bottom: 24px;
+  word-break: keep-all;
+}
+.one-drive .one-drive-title a{
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #0067b8;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+.one-drive .one-drive-title a:focus::before{
+  content: '';
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  border: 3px dotted #fff;
+}
+.one-drive .one-drive-title a:hover{
+  background-color: #045fa3;
+}
+@media (max-width: 1399px){
+  .one-drive .one-drive-title h2{
+    font-size: 29px;
+  }
+}
+@media (max-width: 1083px){
+  .one-drive{
+    position: static;
+    margin-bottom: 0;
+  }
+  .one-drive .banner-one-drive-title{
+    padding: 0 12px;
+  }
+  .one-drive .one-drive-title{
+    position: static;
+    width: 100%;
+    padding: 48px;
+    background-color: #fff;
+    box-shadow: .5px 2px 3px #ccc,
+                -.8px -.5px 3px #ccc;
+    transform: translateY(0);
+    margin: -54px 0 90px 0;
+  }
+  .one-drive .one-drive-title h2{
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 859px){
+  .one-drive{
+    margin-bottom: 45px;
+  }
+  .one-drive .one-drive-title{
+    box-shadow: none;
+    padding: 48px 0;
+    margin: -6px 0 0 0;
+  }
+}
+.business .main-card{
+  margin-bottom: 30px;
+}
+.business h2{
+  font-size: 37px;
+  margin-bottom: 16px;
+}
+@media (max-width: 1399px){
+  .business h2{
+    font-size: 29px;
+  }
+}
+@media (max-width: 1083px){
+  .business .main-card{
+    margin: 0 0 0px;
+  }
+  .business h2{
+    font-size: 24px;
+    padding: 0 12px;
+    margin-bottom: 10px;
+  }
+  .main-card .card{
+    margin-bottom: 30px;
+  }
+}
+.focus-on{
+  display: flex;
+  align-items: center;
+}
+.focus-on div{
+  margin-right: 12px;
+}
+.focus-on a{
+  width: 32px;
+  position: relative;
+}
+.focus-on a:focus::before{
+  content: '';
+  position: absolute;
+  top: -3px;
+  bottom: 3px;
+  left: -2px;
+  right: -2px;
+  border: 3px dotted #0067b8;
+}
+.focus-on a img{
+  width: 100%;
+}
+.focus-on a + a{
+  margin-left: 15px;
+}
+
+.top{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 -8.8% 60px;
+  position: sticky;
+  bottom: 10px;
+  right: 0;
+}
+.top a{
+  display: inline-block;
+  padding: 9px 17px;
+  background-color: #d9d9d9;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  position: relative;
+}
+.top a:focus::before{
+  content: '';
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  border: 3px dotted #000;
+}
+.top a:hover{
+  background-color: #fff;
+  box-shadow: 1px 1px 3px #ccc;
+}
+@media (max-width: 1800px){
+  .top{
+    margin: 0 -5% 60px;
+  }
+}
+@media (max-width: 1083px){
+  .focus-on{
+    padding: 0 12px;
+  }
+  .top{
+    padding: 0 12px;
+    margin: 0 0 60px;
+  }
+}
+@media (max-width: 539px){
+  .top{
+    position: static;
+    margin: 0 0 60px;
+  }
+  .top a{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+footer #footer{
+  width: 100%;
+  background-color: #f2f2f2;
+}
+.footer-nav{
+  display: flex;
+  padding: 0 8%;
+}
+.footer-nav .footer-item{
+  width: 17%;
+}
+.footer-nav .footer-item:nth-child(3n+1){
+  padding-right: 12px;
+}
+.footer-nav .footer-item:nth-child(3n+2),
+.footer-nav .footer-item:nth-child(3n+3){
+  padding: 0 12px;
+}
+.footer-nav .footer-item h4{
+  font-weight: 600;
+  padding: 34px 0 4px;
+  color: #616161;
+  font-size: 15px;
+}
+.footer-nav .footer-item .footer-list li{
+  padding: 4px 0;
+}
+.footer-nav .footer-item .footer-list li a{
+  display: inline-block;
+  text-decoration: none;
+  color: #616161;
+  font-size: 12px;
+}
+.footer-nav .footer-item .footer-list li a:hover,
+.footer-copyright .copyright li a:hover{
+  color: #181818;
+}
+.footer-nav .footer-item .footer-list li a,
+.footer-copyright .copyright li a{
+  position: relative;
+}
+.footer-nav .footer-item .footer-list li a:focus::before,
+.footer-copyright .copyright li a:focus::before{
+  content: '';
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: -4px;
+  right: -4px;
+  border: 1px dashed #181818;
+}
+.footer-nav .footer-item .footer-list li a:hover::after,
+.footer-nav .footer-item .footer-list li a:focus::after,
+.footer-copyright .copyright li a:hover::after,
+.footer-copyright .copyright li a:focus::after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  background-color: #181818;
+}
+.footer-copyright{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 8% 16px;
+}
+.footer-copyright .chinese a{
+  display: flex;
+  position: relative;
+}
+.footer-copyright .chinese a:focus::before{
+  content: '';
+  position: absolute;
+  top: -7px;
+  bottom: -5px;
+  left: -3px;
+  right: -28px;
+  border: 1px dashed #181818;
+}
+.footer-copyright .chinese a i{
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+.footer-copyright .chinese a span{
+  position: relative;
+}
+.footer-copyright .chinese a:hover span::after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  background-color: #181818;
+}
+.footer-copyright .copyright{
+  display: flex;
+}
+.footer-copyright .copyright li{
+  padding: 0 26px 4px 0;
+  font-size: 12px;
+  color: #616161;
+}
+.footer-copyright .chinese a,
+.footer-copyright .copyright li a{
+  text-decoration: none;
+  font-size: 12px;
+  color: #616161;
+}
+@media (max-width: 1800px){
+  .footer-nav{
+    padding: 0 5%;
+  }
+  .footer-copyright{
+    padding: 30px 5% 16px;
+  }
+}
+@media (max-width: 1083px){
+  .footer-nav{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 12px;
+  }
+  .footer-nav .footer-item{
+    width: 33.33%;
+  }
+  .footer-nav .footer-item:nth-child(3n+1){
+    padding: 0 12px;
+  }
+  .footer-copyright{
+    display: flex;
+    padding: 30px 24px 16px;
+  }
+}
+@media (max-width: 767px){
+  .footer-copyright{
+   flex-wrap: wrap;
+  }
+  .footer-copyright .copyright{
+    width: 100%;
+    padding-top: 10px;
+  }
+  .footer-copyright .copyright li{
+    padding: 6px 7px 0 6px;
+  }
+}
+@media (max-width: 539px){
+  .footer-nav .footer-item{
+    width: 100%;
+  }
+  .footer-copyright .copyright li{
+    padding: 6px 13px 0 0;
+  }
+  .footer-copyright .copyright{
+    flex-wrap: wrap;
+  }
+}
