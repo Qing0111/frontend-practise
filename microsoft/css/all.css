@@ -886,6 +886,7 @@ header #nav nav{
   margin-bottom: 24px;
   word-break: keep-all;
   overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 #container .one-drive .one-drive-title a{
   display: inline-block;
