@@ -54,14 +54,6 @@ header #nav nav{
   color: #262626;
   font-size: 13px;
 }
-/* #nav .logo-nav .list li a span,
-#nav .microsoft-search .all .all-btn label span,
-#nav .microsoft-search .search span,
-#nav .user-info .shop span,
-#nav .microsoft-search .drop-down-menu li a span,
-#nav .logo-nav .list li a span{
-  border-bottom: 2px solid transparent;
-} */
 #nav .logo-nav .list li a:hover span,
 #nav .microsoft-search .all .all-btn label:hover span,
 #nav .microsoft-search .search:hover span,
@@ -123,15 +115,6 @@ header #nav nav{
 #nav #burger-menu:checked ~ .microsoft-search .all-btn label span{
   border-bottom: none;
 }
-/* #nav #burger-menu:checked ~ .microsoft-search .all-btn label::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border: 1px dashed #000;
-} */
 #nav .microsoft-search .all i{
   font-size: 12px;
 }
@@ -530,51 +513,51 @@ header #nav nav{
 
 
 
-.swiper{
+#container .swiper{
   margin-bottom: 63px;
 }
 picture{
   display: inline-block;
   height: 0;
 }
-.swiper .banner,
-.swiper .microsoft-banner{
+#container .swiper .banner,
+#container .swiper .microsoft-banner{
   position: relative;
 }
-.swiper .banner .title{
+#container .swiper .banner .title{
   position: absolute;
   width: 31%;
   top: 50%;
   left: 60.2%;
   transform: translateY(-51.5%);
 }
-.swiper .microsoft-banner .title{
+#container .swiper .microsoft-banner .title{
   position: absolute;
   width: 31%;
   top: 50%;
   left: 8%;
   transform: translateY(-51.5%);
 }
-.swiper .banner .title span{
+#container .swiper .banner .title span{
   display: inline-block;
   padding: 2px 12px;
   margin-bottom: 2px;
   background-color: #feb72f;
   font-weight: 600;
 }
-.swiper .banner .title h1,
-.swiper .microsoft-banner .title h2{
+#container .swiper .banner .title h1,
+#container .swiper .microsoft-banner .title h2{
   font-weight: 600;
   font-size: 37px;
   margin-bottom: 14.5px;
 }
-.swiper .banner .title p,
-.swiper .microsoft-banner .title p{
+#container .swiper .banner .title p,
+#container .swiper .microsoft-banner .title p{
   margin-bottom: 24px;
   word-break: keep-all;
   overflow-wrap: break-word;
 }
-.swiper .banner .title a{
+#container .swiper .banner .title a{
   display: inline-block;
   padding: 8px 14px;
   background-color: #046ab5;
@@ -583,7 +566,7 @@ picture{
   text-decoration: none;
   position: relative;
 }
-.swiper .microsoft-banner .title .one-use{
+#container .swiper .microsoft-banner .title .one-use{
   display: inline-block;
   background-color: #046ab5;
   padding: 10px 12px;
@@ -592,15 +575,15 @@ picture{
   text-decoration: none;
   position: relative;
 }
-.swiper .microsoft-banner .title .six-use{
+#container .swiper .microsoft-banner .title .six-use{
   display: inline-block;
   color: #046ab5;
   font-weight: 600;
   padding: 8px 21px 8px 0;
   position: relative;
 }
-.swiper .banner .title a:focus::before,
-.swiper .microsoft-banner .title .one-use:focus::before{
+#container .swiper .banner .title a:focus::before,
+#container .swiper .microsoft-banner .title .one-use:focus::before{
   content: '';
   position: absolute;
   top: 3px;
@@ -609,30 +592,30 @@ picture{
   right: 3px;
   border: 3px dotted #f9fbfd;
 }
-.swiper .microsoft-banner .title .six-use:focus::before{
+#container .swiper .microsoft-banner .title .six-use:focus::before{
   top: -5px;
   bottom: -5px;
   left: -3px;
   right: 12px;
   border: 3px dotted #046ab5;
 }
-.swiper .banner .title a:hover,
-.swiper .microsoft-banner .title a:hover{
+#container .swiper .banner .title a:hover,
+#container .swiper .microsoft-banner .title a:hover{
   background-color: #045fa3;
 }
-.swiper .microsoft-banner .title .six-use:hover{
+#container .swiper .microsoft-banner .title .six-use:hover{
   background-color: transparent;
 }
 
 
-.swiper .microsoft-banner .title .six-use i{
+#container .swiper .microsoft-banner .title .six-use i{
   margin-left: 5px;
   transition: transform .3s;
 }
-.swiper .microsoft-banner .title .six-use:hover i{
+#container .swiper .microsoft-banner .title .six-use:hover i{
   transform: translateX(5px);
 }
-.swiper .microsoft-banner .title .six-use:hover::after{
+#container .swiper .microsoft-banner .title .six-use:hover::after{
   content: '';
   position: absolute;
   height: 1px;
@@ -642,14 +625,14 @@ picture{
   background-color: #045fa3;
 }
 
-.swiper .swipe-btn{
+#container .swiper .swipe-btn{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 53px;
 }
-.swiper .swipe-btn button{
+#container .swiper .swipe-btn button{
   border: 0;
   background-color: transparent;
   font-size: 28px;
@@ -657,7 +640,7 @@ picture{
   cursor: pointer;
   position: relative;
 }
-.swiper .swipe-btn button:focus:before{
+#container .swiper .swipe-btn button:focus:before{
   content: '';
   position: absolute;
   top: -10px;
@@ -666,43 +649,43 @@ picture{
   right: -8px;
   border: 3px dotted #000;
 }
-.swiper .swipe-btn button .fa-chevron-left,
-.swiper .swipe-btn button .fa-chevron-right{
+#container .swiper .swipe-btn button .fa-chevron-left,
+#container .swiper .swipe-btn button .fa-chevron-right{
   transition: transform .3s;
 }
-.swiper .swipe-btn button:hover .fa-chevron-left{
+#container .swiper .swipe-btn button:hover .fa-chevron-left{
   transform: translateX(-8px);
 }
-.swiper .swipe-btn button:hover .fa-chevron-right{
+#container .swiper .swipe-btn button:hover .fa-chevron-right{
   transform: translateX(8px);
 }
-.swiper .swipe-btn .dot{
+#container .swiper .swipe-btn .dot{
   width: 80px;
   position: static;
 }
-.swiper-pagination-bullet{
+#container .swiper-pagination-bullet{
   background-color: #000;
 }
 @media (max-width: 1399px){
-  .swiper .banner .title h1,
-  .swiper .microsoft-banner .title h2{
+  #container .swiper .banner .title h1,
+  #container .swiper .microsoft-banner .title h2{
     font-size: 29px;
   }
 }
 @media (max-width: 1083px){
-  .swiper .banner,
-  .swiper .microsoft-banner{
+  #container .swiper .banner,
+  #container .swiper .microsoft-banner{
     position: static;
   }
-  .swiper .banner .banner-title,
-  .swiper .microsoft-banner .banner-title{
+  #container .swiper .banner .banner-title,
+  #container .swiper .microsoft-banner .banner-title{
     padding: 0 12px;
   }
-  .swiper .banner .title span{
+  #container .swiper .banner .title span{
     margin-bottom: 4px;
   }
-  .swiper .banner .title,
-  .swiper .microsoft-banner .title{
+  #container .swiper .banner .title,
+  #container .swiper .microsoft-banner .title{
     position: static;
     width: 100%;
     padding: 48px;
@@ -712,22 +695,22 @@ picture{
     transform: translateY(0px);
     margin-top: -53px;
   }
-  .swiper .banner .title h1,
-  .swiper .microsoft-banner .title h2{
+  #container .swiper .banner .title h1,
+  #container .swiper .microsoft-banner .title h2{
     font-size: 24px;
     margin-bottom: 8px;
   }
 }
 @media (max-width: 859px){
-  .swiper{
+  #container .swiper{
     margin-bottom: 20px;
   }
-  .swiper .banner .banner-title,
-  .swiper .microsoft-banner .banner-title{
+  #container .swiper .banner .banner-title,
+  #container .swiper .microsoft-banner .banner-title{
     padding: 0;
   }
-  .swiper .banner .title,
-  .swiper .microsoft-banner .title{
+  #container .swiper .banner .title,
+  #container .swiper .microsoft-banner .title{
     position:static;
     padding: 24px 24px 16px 24px;
     margin-top: -6px;
@@ -794,41 +777,41 @@ picture{
     margin-bottom: 20px;
   }
 }
-.main-card{
+#container .main-card{
   display: flex;
   justify-content: space-between;
   margin-bottom: 80px;
 }
-.main-card .card{
+#container .main-card .card{
   width: calc((100% - 72px) / 4);
   cursor: pointer;
 }
-.main-card .card .card-header {
+#container .main-card .card .card-header {
   padding-top: 10px;
 }
-.main-card .card .card-header span{
+#container .main-card .card .card-header span{
   display: inline-block;
   padding: 2px 12px;
   background-color: #feb72f;
   font-weight: 600;
   margin-bottom: 0px;
 }
-.main-card .card .card-header .null{
+#container .main-card .card .card-header .null{
   display: inline-block;
   font-size: 0;
   padding: 11px 0;
 }
-.main-card .card .card-body h3{
+#container .main-card .card .card-body h3{
   font-weight: 600;
   font-size: 29px;
   margin-bottom: 10px;
 }
-.main-card .card .card-body p{
+#container .main-card .card .card-body p{
   margin-bottom: 8px;
   word-break: keep-all;
   overflow-wrap: break-word;
 }
-.main-card .card .card-footer a{
+#container .main-card .card .card-footer a{
   display: inline-block;
   padding: 16px 0;
   color: #0067b8;
@@ -836,7 +819,7 @@ picture{
   text-decoration: none;
   position: relative;
 }
-.main-card .card .card-footer a:focus::before{
+#container .main-card .card .card-footer a:focus::before{
   content: '';
   position: absolute;
   top: 13px;
@@ -845,7 +828,7 @@ picture{
   right: -7px;
   border: 3px dotted #0067b8;
 }
-.main-card .card .card-footer a:hover::after{
+#container .main-card .card .card-footer a:hover::after{
   content: '';
   position: absolute;
   height: 1px;
@@ -854,61 +837,61 @@ picture{
   right: 17px;
   background-color: #0067b8;
 }
-.main-card .card .card-footer a i{
+#container .main-card .card .card-footer a i{
   padding-left: 5px;
   transition: transform .3s;
 }
-.main-card .card .card-footer a:hover i{
+#container .main-card .card .card-footer a:hover i{
   transform: translateX(3px);
 }
 @media (max-width: 1399px){
-  .main-card .card .card-body h3{
+  #container .main-card .card .card-body h3{
     font-size: 24px;
   }
 }
 @media (max-width: 1083px){
-  .main-card{
+  #container .main-card{
     flex-wrap: wrap;
     margin-bottom: 40px;
     padding: 0 12px;
   }
-  .main-card .card{
+  #container .main-card .card{
     width: calc((100% - 24px) / 2);
     padding-bottom: 10px;
   }
-  .main-card .card .card-body h3{
+  #container .main-card .card .card-body h3{
     font-size: 21px;
     margin-bottom: 4px;
     margin-top: 1px;
   }
 }
 @media (max-width: 539px){
-  .main-card .card{
+  #container .main-card .card{
     width: 100%;
     padding-bottom: 10px;
   }
 }
-.one-drive{
+#container .one-drive{
   position: relative;
   margin-bottom: 80px;
 }
-.one-drive .one-drive-title{
+#container .one-drive .one-drive-title{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 6.7%;
   width: 25%;
 }
-.one-drive .one-drive-title h2{
+#container .one-drive .one-drive-title h2{
   font-size: 37px;
   font-weight: 600;
   margin-bottom: 16px;
 }
-.one-drive .one-drive-title p{
+#container .one-drive .one-drive-title p{
   margin-bottom: 24px;
   word-break: keep-all;
 }
-.one-drive .one-drive-title a{
+#container .one-drive .one-drive-title a{
   display: inline-block;
   padding: 8px 14px;
   background-color: #0067b8;
@@ -917,7 +900,7 @@ picture{
   text-decoration: none;
   position: relative;
 }
-.one-drive .one-drive-title a:focus::before{
+#container .one-drive .one-drive-title a:focus::before{
   content: '';
   position: absolute;
   top: 3px;
@@ -926,23 +909,23 @@ picture{
   right: 3px;
   border: 3px dotted #fff;
 }
-.one-drive .one-drive-title a:hover{
+#container .one-drive .one-drive-title a:hover{
   background-color: #045fa3;
 }
 @media (max-width: 1399px){
-  .one-drive .one-drive-title h2{
+  #container .one-drive .one-drive-title h2{
     font-size: 29px;
   }
 }
 @media (max-width: 1083px){
-  .one-drive{
+  #container .one-drive{
     position: static;
     margin-bottom: 0;
   }
-  .one-drive .banner-one-drive-title{
+  #container .one-drive .banner-one-drive-title{
     padding: 0 12px;
   }
-  .one-drive .one-drive-title{
+  #container .one-drive .one-drive-title{
     position: static;
     width: 100%;
     padding: 48px;
@@ -952,58 +935,58 @@ picture{
     transform: translateY(0);
     margin: -54px 0 90px 0;
   }
-  .one-drive .one-drive-title h2{
+  #container .one-drive .one-drive-title h2{
     font-size: 24px;
     margin-bottom: 8px;
   }
 }
 @media (max-width: 859px){
-  .one-drive{
+  #container .one-drive{
     margin-bottom: 45px;
   }
-  .one-drive .one-drive-title{
+  #container .one-drive .one-drive-title{
     box-shadow: none;
     padding: 48px 0;
     margin: -6px 0 0 0;
   }
 }
-.business .main-card{
+#container .business .main-card{
   margin-bottom: 30px;
 }
-.business h2{
+#container .business h2{
   font-size: 37px;
   margin-bottom: 16px;
 }
 @media (max-width: 1399px){
-  .business h2{
+  #container .business h2{
     font-size: 29px;
   }
 }
 @media (max-width: 1083px){
-  .business .main-card{
+  #container .business .main-card{
     margin: 0 0 0px;
   }
-  .business h2{
+  #container .business h2{
     font-size: 24px;
     padding: 0 12px;
     margin-bottom: 10px;
   }
-  .main-card .card{
+  #container .main-card .card{
     margin-bottom: 30px;
   }
 }
-.focus-on{
+#container .focus-on{
   display: flex;
   align-items: center;
 }
-.focus-on div{
+#container .focus-on div{
   margin-right: 12px;
 }
-.focus-on a{
+#container .focus-on a{
   width: 32px;
   position: relative;
 }
-.focus-on a:focus::before{
+#container .focus-on a:focus::before{
   content: '';
   position: absolute;
   top: -3px;
@@ -1012,14 +995,14 @@ picture{
   right: -2px;
   border: 3px dotted #0067b8;
 }
-.focus-on a img{
+#container .focus-on a img{
   width: 100%;
 }
-.focus-on a + a{
+#container .focus-on a + a{
   margin-left: 15px;
 }
 
-.top{
+#container .top{
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -1028,7 +1011,7 @@ picture{
   bottom: 10px;
   right: 0;
 }
-.top a{
+#container .top a{
   display: inline-block;
   padding: 9px 17px;
   background-color: #d9d9d9;
@@ -1037,7 +1020,7 @@ picture{
   font-weight: 600;
   position: relative;
 }
-.top a:focus::before{
+#container .top a:focus::before{
   content: '';
   position: absolute;
   top: 3px;
@@ -1046,30 +1029,30 @@ picture{
   right: 3px;
   border: 3px dotted #000;
 }
-.top a:hover{
+#container .top a:hover{
   background-color: #fff;
   box-shadow: 1px 1px 3px #ccc;
 }
 @media (max-width: 1800px){
-  .top{
+  #container .top{
     margin: 0 -5% 60px;
   }
 }
 @media (max-width: 1083px){
-  .focus-on{
+  #container .focus-on{
     padding: 0 12px;
   }
-  .top{
+  #container .top{
     padding: 0 12px;
     margin: 0 0 60px;
   }
 }
 @media (max-width: 539px){
-  .top{
+  #container .top{
     position: static;
     margin: 0 0 60px;
   }
-  .top a{
+  #container .top a{
     width: 100%;
     text-align: center;
   }
@@ -1080,44 +1063,44 @@ footer #footer{
   width: 100%;
   background-color: #f2f2f2;
 }
-.footer-nav{
+#footer .footer-nav{
   display: flex;
   padding: 0 8%;
 }
-.footer-nav .footer-item{
+#footer .footer-nav .footer-item{
   width: 17%;
 }
-.footer-nav .footer-item:nth-child(3n+1){
+#footer .footer-nav .footer-item:nth-child(3n+1){
   padding-right: 12px;
 }
-.footer-nav .footer-item:nth-child(3n+2),
-.footer-nav .footer-item:nth-child(3n+3){
+#footer .footer-nav .footer-item:nth-child(3n+2),
+#footer .footer-nav .footer-item:nth-child(3n+3){
   padding: 0 12px;
 }
-.footer-nav .footer-item h4{
+#footer .footer-nav .footer-item h4{
   font-weight: 600;
   padding: 34px 0 4px;
   color: #616161;
   font-size: 15px;
 }
-.footer-nav .footer-item .footer-list li{
+#footer .footer-nav .footer-item .footer-list li{
   padding: 4px 0;
 }
-.footer-nav .footer-item .footer-list li a{
+#footer .footer-nav .footer-item .footer-list li a{
   display: inline-block;
   text-decoration: none;
   color: #616161;
   font-size: 12px;
 }
-.footer-nav .footer-item .footer-list li a:hover,
-.footer-copyright .copyright li a:hover{
+#footer .footer-nav .footer-item .footer-list li a:hover,
+#footer .footer-copyright .copyright li a:hover{
   color: #181818;
 }
-.footer-nav .footer-item .footer-list li a,
-.footer-copyright .copyright li a{
+#footer .footer-nav .footer-item .footer-list li a,
+#footer .footer-copyright .copyright li a{
   position: relative;
 }
-.footer-nav .footer-item .footer-list li a:focus::before,
+#footer .footer-nav .footer-item .footer-list li a:focus::before,
 .footer-copyright .copyright li a:focus::before{
   content: '';
   position: absolute;
@@ -1127,10 +1110,10 @@ footer #footer{
   right: -4px;
   border: 1px dashed #181818;
 }
-.footer-nav .footer-item .footer-list li a:hover::after,
-.footer-nav .footer-item .footer-list li a:focus::after,
-.footer-copyright .copyright li a:hover::after,
-.footer-copyright .copyright li a:focus::after{
+#footer .footer-nav .footer-item .footer-list li a:hover::after,
+#footer .footer-nav .footer-item .footer-list li a:focus::after,
+#footer .footer-copyright .copyright li a:hover::after,
+#footer .footer-copyright .copyright li a:focus::after{
   content: '';
   position: absolute;
   height: 1px;
@@ -1139,16 +1122,16 @@ footer #footer{
   bottom: 2px;
   background-color: #181818;
 }
-.footer-copyright{
+#footer .footer-copyright{
   display: flex;
   justify-content: space-between;
   padding: 30px 8% 16px;
 }
-.footer-copyright .chinese a{
+#footer .footer-copyright .chinese a{
   display: flex;
   position: relative;
 }
-.footer-copyright .chinese a:focus::before{
+#footer .footer-copyright .chinese a:focus::before{
   content: '';
   position: absolute;
   top: -7px;
@@ -1157,15 +1140,15 @@ footer #footer{
   right: -28px;
   border: 1px dashed #181818;
 }
-.footer-copyright .chinese a i{
+#footer .footer-copyright .chinese a i{
   padding-right: 10px;
   font-size: 20px;
 }
 
-.footer-copyright .chinese a span{
+#footer .footer-copyright .chinese a span{
   position: relative;
 }
-.footer-copyright .chinese a:hover span::after{
+#footer .footer-copyright .chinese a:hover span::after{
   content: '';
   position: absolute;
   height: 1px;
@@ -1174,65 +1157,65 @@ footer #footer{
   bottom: 4px;
   background-color: #181818;
 }
-.footer-copyright .copyright{
+#footer .footer-copyright .copyright{
   display: flex;
 }
-.footer-copyright .copyright li{
+#footer .footer-copyright .copyright li{
   padding: 0 26px 4px 0;
   font-size: 12px;
   color: #616161;
 }
-.footer-copyright .chinese a,
-.footer-copyright .copyright li a{
+#footer .footer-copyright .chinese a,
+#footer .footer-copyright .copyright li a{
   text-decoration: none;
   font-size: 12px;
   color: #616161;
 }
 @media (max-width: 1800px){
-  .footer-nav{
+  #footer .footer-nav{
     padding: 0 5%;
   }
-  .footer-copyright{
+  #footer .footer-copyright{
     padding: 30px 5% 16px;
   }
 }
 @media (max-width: 1083px){
-  .footer-nav{
+  #footer .footer-nav{
     display: flex;
     flex-wrap: wrap;
     padding: 0 12px;
   }
-  .footer-nav .footer-item{
+  #footer .footer-nav .footer-item{
     width: 33.33%;
   }
-  .footer-nav .footer-item:nth-child(3n+1){
+  #footer .footer-nav .footer-item:nth-child(3n+1){
     padding: 0 12px;
   }
-  .footer-copyright{
+  #footer .footer-copyright{
     display: flex;
     padding: 30px 24px 16px;
   }
 }
 @media (max-width: 767px){
-  .footer-copyright{
-   flex-wrap: wrap;
+  #footer .footer-copyright{
+    flex-wrap: wrap;
   }
-  .footer-copyright .copyright{
+  #footer .footer-copyright .copyright{
     width: 100%;
     padding-top: 10px;
   }
-  .footer-copyright .copyright li{
+  #footer .footer-copyright .copyright li{
     padding: 6px 7px 0 6px;
   }
 }
 @media (max-width: 539px){
-  .footer-nav .footer-item{
+  #footer .footer-nav .footer-item{
     width: 100%;
   }
-  .footer-copyright .copyright li{
+  #footer .footer-copyright .copyright li{
     padding: 6px 13px 0 0;
   }
-  .footer-copyright .copyright{
+  #footer .footer-copyright .copyright{
     flex-wrap: wrap;
   }
 }
