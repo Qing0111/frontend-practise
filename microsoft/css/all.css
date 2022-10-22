@@ -358,7 +358,7 @@ header #nav nav{
   #nav #burger-menu:checked ~ .microsoft-search .all .all-btn label .fa-xmark{
     display: block;
     margin-top: 5px;
-    font-size: 28px;
+    font-size: 23px;
   }
   #nav .microsoft-search .drop-down-menu > li{
     padding-bottom: 0;
