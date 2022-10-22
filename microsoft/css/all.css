@@ -512,7 +512,9 @@ header #nav nav{
 }
 
 
-
+#container{
+  height: 100%;
+}
 #container .swiper{
   margin-bottom: 63px;
 }
