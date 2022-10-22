@@ -515,10 +515,6 @@ header #nav nav{
 #container .swiper{
   margin-bottom: 63px;
 }
-picture{
-  display: inline-block;
-  height: 0;
-}
 #container .swiper .banner,
 #container .swiper .microsoft-banner{
   position: relative;
