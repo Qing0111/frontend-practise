@@ -697,6 +697,9 @@ header #nav nav{
     transform: translateY(0px);
     margin-top: -53px;
   }
+  #container .swiper .microsoft-banner .title{
+    padding: 48px 48px 72px 48px;
+  }
   #container .swiper .banner .title h1,
   #container .swiper .microsoft-banner .title h2{
     font-size: 24px;
@@ -716,6 +719,14 @@ header #nav nav{
     position:static;
     padding: 24px 24px 16px 24px;
     margin-top: -6px;
+  }
+  #container .swiper .microsoft-banner .title{
+    padding: 24px 24px 40px 24px;
+  }
+}
+@media (max-width: 403px){
+  #container .swiper .microsoft-banner .title{
+    padding: 24px 24px 16px 24px;
   }
 }
 
