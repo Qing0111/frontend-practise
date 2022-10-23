@@ -523,7 +523,7 @@ header #nav nav{
   position: absolute;
   width: 31%;
   top: 50%;
-  left: 60.2%;
+  left: 60.5%;
   transform: translateY(-51.5%);
 }
 #container .swiper .microsoft-banner .title{
@@ -551,6 +551,10 @@ header #nav nav{
   margin-bottom: 24px;
   word-break: keep-all;
   overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+#container .swiper .microsoft-banner .title p{
+  margin-bottom: 16px;
 }
 #container .swiper .banner .title a{
   display: inline-block;
@@ -560,21 +564,26 @@ header #nav nav{
   color: #f9fbfd;
   text-decoration: none;
   position: relative;
+  border-radius: 2px;
 }
 #container .swiper .microsoft-banner .title .one-use{
   display: inline-block;
   background-color: #046ab5;
-  padding: 10px 12px;
-  margin: 8px 16px 8px 0;
+  padding: 8px 13px;
+  margin: 8px 30px 8px 0;
   color: #f9fbfd;
   text-decoration: none;
   position: relative;
+  border-radius: 2px;
+  font-weight: 600;
 }
 #container .swiper .microsoft-banner .title .six-use{
   display: inline-block;
   color: #046ab5;
   font-weight: 600;
   padding: 8px 21px 8px 0;
+  position: relative;
+  text-decoration: none;
   position: relative;
 }
 #container .swiper .banner .title a:focus::before,
@@ -588,6 +597,8 @@ header #nav nav{
   border: 3px dotted #f9fbfd;
 }
 #container .swiper .microsoft-banner .title .six-use:focus::before{
+  content: '';
+  position: absolute;
   top: -5px;
   bottom: -5px;
   left: -3px;
@@ -595,13 +606,9 @@ header #nav nav{
   border: 3px dotted #046ab5;
 }
 #container .swiper .banner .title a:hover,
-#container .swiper .microsoft-banner .title a:hover{
+#container .swiper .microsoft-banner .title .one-use:hover{
   background-color: #045fa3;
 }
-#container .swiper .microsoft-banner .title .six-use:hover{
-  background-color: transparent;
-}
-
 
 #container .swiper .microsoft-banner .title .six-use i{
   margin-left: 5px;
@@ -805,6 +812,7 @@ header #nav nav{
   margin-bottom: 8px;
   word-break: keep-all;
   overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 #container .main-card .card .card-footer a{
   display: inline-block;
@@ -1016,6 +1024,7 @@ header #nav nav{
   color: #000;
   font-weight: 600;
   position: relative;
+  border-radius: 2px;
 }
 #container .top a:focus::before{
   content: '';
