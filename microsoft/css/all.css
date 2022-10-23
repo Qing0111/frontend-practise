@@ -724,6 +724,16 @@ header #nav nav{
     padding: 24px 24px 40px 24px;
   }
 }
+@media (max-width: 723px){
+  #container .swiper .microsoft-banner .title{
+    padding: 24px 24px 16px 24px;
+  }
+}
+@media (max-width: 553px){
+  #container .swiper .microsoft-banner .title{
+    padding: 24px 24px 40px 24px;
+  }
+}
 @media (max-width: 403px){
   #container .swiper .microsoft-banner .title{
     padding: 24px 24px 16px 24px;
