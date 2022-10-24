@@ -521,14 +521,14 @@ header #nav nav{
 }
 #container .swiper .banner .title{
   position: absolute;
-  width: 31%;
+  width: 30%;
   top: 50%;
   left: 60.5%;
   transform: translateY(-51.5%);
 }
 #container .swiper .microsoft-banner .title{
   position: absolute;
-  width: 31%;
+  width: 30%;
   top: 50%;
   left: 8%;
   transform: translateY(-51.5%);
@@ -550,7 +550,6 @@ header #nav nav{
 #container .swiper .microsoft-banner .title p{
   margin-bottom: 24px;
   word-break: keep-all;
-  overflow-wrap: break-word;
   word-wrap: break-word;
 }
 #container .swiper .microsoft-banner .title p{
@@ -832,7 +831,6 @@ header #nav nav{
 #container .main-card .card .card-body p{
   margin-bottom: 8px;
   word-break: keep-all;
-  overflow-wrap: break-word;
   word-wrap: break-word;
 }
 #container .main-card .card .card-footer a{
@@ -914,7 +912,6 @@ header #nav nav{
 #container .one-drive .one-drive-title p{
   margin-bottom: 24px;
   word-break: keep-all;
-  overflow-wrap: break-word;
   word-wrap: break-word;
 }
 #container .one-drive .one-drive-title a{
