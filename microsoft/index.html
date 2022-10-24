@@ -557,6 +557,11 @@
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
+      breakpoints: {
+        767: {
+          allowTouchMove:false,
+        }
+      },
       slidesPerView: 1,
       spaceBetween: 30,
       loop: true,
@@ -567,6 +572,9 @@
       navigation: {
         nextEl: ".button-next",
         prevEl: ".button-prev",
+      },
+      mousewheel: {
+        invert: false,
       },
     });
   </script>
