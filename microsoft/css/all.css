@@ -49,10 +49,13 @@ header #nav nav{
 #nav .logo-nav .list li a{
   display: inline-block;
   margin-top: 1px;
-  padding: 16px 10px 15px 11px;
+  padding: 16px 5px 15px 13px;
   text-decoration: none;
   color: #262626;
   font-size: 13px;
+}
+#nav .logo-nav .list li + li{
+  margin-left: 12px;
 }
 #nav .logo-nav .list li a:hover span,
 #nav .microsoft-search .all .all-btn label:hover span,
@@ -95,11 +98,11 @@ header #nav nav{
 
 #nav .microsoft-search{
   display: flex;
-  margin-right: 20px;
+  margin-right: 31px;
 }
 #nav .microsoft-search .all .all-btn label{
   display: inline-block;
-  padding: 16px 5px 16px 15px;
+  padding: 16px 15px 16px 15px;
   cursor: pointer;
 }
 #nav .microsoft-search .all .all-btn label .fa-bars,
@@ -124,7 +127,7 @@ header #nav nav{
   width: 1228px;
   top: 53px;
   left: 50%;
-  transform: translateX(-44%);
+  transform: translateX(-41.5%);
   display: flex;
   flex-wrap: wrap;
   z-index: 2;
@@ -189,9 +192,11 @@ header #nav nav{
 #nav .microsoft-search .search{
   padding: 15px 9px 16px;
 }
-#nav .microsoft-search .search i,
+#nav .microsoft-search .search i{
+  font-size: 15px;
+}
 #nav .user-info .shop i{
-  font-size: 16px;
+  font-size: 14px;
 }
 #nav .microsoft-search .search,
 #nav .user-info .shop,
@@ -513,7 +518,7 @@ header #nav nav{
 
 
 #container .swiper{
-  margin-bottom: 63px;
+  margin-bottom: 53px;
 }
 #container .swiper .banner,
 #container .swiper .microsoft-banner{
@@ -523,14 +528,14 @@ header #nav nav{
   position: absolute;
   width: 30%;
   top: 50%;
-  left: 60.5%;
+  left: 59.5%;
   transform: translateY(-51.5%);
 }
 #container .swiper .microsoft-banner .title{
   position: absolute;
   width: 30%;
   top: 50%;
-  left: 8%;
+  left: 10.5%;
   transform: translateY(-51.5%);
 }
 #container .swiper .banner .title span{
@@ -568,8 +573,8 @@ header #nav nav{
 #container .swiper .microsoft-banner .title .one-use{
   display: inline-block;
   background-color: #046ab5;
-  padding: 8px 13px;
-  margin: 8px 30px 8px 0;
+  padding: 8px 15px 8px 13px;
+  margin: 8px 28px 8px 0;
   color: #f9fbfd;
   text-decoration: none;
   position: relative;
