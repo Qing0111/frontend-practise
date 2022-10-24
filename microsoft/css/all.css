@@ -57,6 +57,9 @@ header #nav nav{
 #nav .logo-nav .list li + li{
   margin-left: 12px;
 }
+#nav .microsoft-search .all .all-btn label span{
+  border-bottom: 2px solid transparent;
+}
 #nav .logo-nav .list li a:hover span,
 #nav .microsoft-search .all .all-btn label:hover span,
 #nav .microsoft-search .search:hover span,
@@ -104,6 +107,12 @@ header #nav nav{
   display: inline-block;
   padding: 16px 15px 16px 15px;
   cursor: pointer;
+  display: flex;
+}
+#nav .microsoft-search .all .all-btn label .fa-chevron-down{
+  align-self: end;
+  font-size: 14px;
+  padding-left: 1.5px;
 }
 #nav .microsoft-search .all .all-btn label .fa-bars,
 #nav .microsoft-search .all .all-btn label .fa-xmark{
@@ -255,7 +264,35 @@ header #nav nav{
 }
 @media (max-width: 1083px){
   header #nav nav{
-    padding: 0 2.3%;
+    padding: 0 2.25%;
+  }
+  #nav .logo-nav .logo{
+    margin: 5px 0px 0;
+    padding: 10px 6px 19px 10px;
+  }
+  #nav .logo-nav .list{
+    margin-left: 1px;
+  }
+  #nav .logo-nav .list li a{
+    padding: 16px 11.6px 15px 10px;
+  }
+  #nav .logo-nav .list li + li{
+    margin-left: 0px;
+  }
+  #nav .logo-nav .list li:nth-child(6) a{
+    padding: 16px 11.6px 15px 6px;
+  }
+  #nav .microsoft-search .all .all-btn label{
+    padding: 18px 9px 15px 15px;
+  }
+  #nav .microsoft-search .search{
+    padding: 17px 9px 15px 9px;
+  }
+  #nav .user-info .shop{
+    padding: 15px 9px 16px 13px;
+  }
+  #nav .user-info .personal .user{
+    padding: 9px 0px 0px;
   }
 }
 @media (max-width: 900px){
@@ -265,6 +302,9 @@ header #nav nav{
   #nav .logo-nav .list .more{
     display: block;
     position: relative;
+  }
+  #nav .logo-nav .list .more label span{
+    border-bottom: 2px solid transparent;
   }
   #nav .logo-nav .list .more label:hover span{
     border-bottom: 2px solid #000;
@@ -280,6 +320,12 @@ header #nav nav{
     margin-top: 1px;
     cursor: pointer;
     position: relative;
+    display: flex;
+  }
+  #nav .logo-nav .list .more label .fa-chevron-down{
+    align-self: end;
+    font-size: 14px;
+    padding-left: 1.5px;
   }
   #nav .logo-nav .list .more label:focus:after{
     content: '';
@@ -321,9 +367,10 @@ header #nav nav{
   header #nav nav{
     padding: 0;
     margin-bottom: 0;
+    border-bottom: 1px solid #e6e6e6;
   }
   #nav .logo-nav .logo{
-    padding: 12px 14px;
+    padding: 12px 14px 12px 13px;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -331,7 +378,7 @@ header #nav nav{
     right: 0;
     margin: auto;
   }
-  #nav .logo-nav .list li a,
+  #nav .logo-nav .list,
   #nav .logo-nav .list .more{
     display: none;
   }
@@ -423,11 +470,11 @@ header #nav nav{
     padding: 0;
   }
   #nav .user-info .shop{
-    padding: 15px 20px 16px;
+    padding: 15px 24px 16px 13px;
   }
   #nav .user-info .personal .user{
-    margin-right: 14px;
-    padding: 9px 0px 0px;
+    margin-right: 16px;
+    padding: 10px 0px 0px; 
   }
   #nav .microsoft-search .drop-down-menu #software:checked ~ ul,
   #nav .microsoft-search .drop-down-menu #computer:checked ~ ul,
@@ -517,50 +564,50 @@ header #nav nav{
 }
 
 
-#container .swiper{
+#banner .swiper{
   margin-bottom: 53px;
 }
-#container .swiper .banner,
-#container .swiper .microsoft-banner{
+#banner .swiper .surface-banner,
+#banner .swiper .microsoft-banner{
   position: relative;
 }
-#container .swiper .banner .title{
+#banner .swiper .surface-banner .title{
   position: absolute;
   width: 30%;
   top: 50%;
   left: 59.5%;
   transform: translateY(-51.5%);
 }
-#container .swiper .microsoft-banner .title{
+#banner .swiper .microsoft-banner .title{
   position: absolute;
   width: 30%;
   top: 50%;
   left: 10.5%;
   transform: translateY(-51.5%);
 }
-#container .swiper .banner .title span{
+#banner .swiper .surface-banner .title span{
   display: inline-block;
   padding: 2px 12px;
   margin-bottom: 2px;
   background-color: #feb72f;
   font-weight: 600;
 }
-#container .swiper .banner .title h1,
-#container .swiper .microsoft-banner .title h2{
+#banner .swiper .surface-banner .title h1,
+#banner .swiper .microsoft-banner .title h2{
   font-weight: 600;
   font-size: 37px;
   margin-bottom: 14.5px;
 }
-#container .swiper .banner .title p,
-#container .swiper .microsoft-banner .title p{
+#banner .swiper .surface-banner .title p,
+#banner .swiper .microsoft-banner .title p{
   margin-bottom: 24px;
   word-break: keep-all;
   word-wrap: break-word;
 }
-#container .swiper .microsoft-banner .title p{
+#banner .swiper .microsoft-banner .title p{
   margin-bottom: 16px;
 }
-#container .swiper .banner .title a{
+#banner .swiper .surface-banner .title a{
   display: inline-block;
   padding: 8px 14px;
   background-color: #046ab5;
@@ -570,10 +617,10 @@ header #nav nav{
   position: relative;
   border-radius: 2px;
 }
-#container .swiper .microsoft-banner .title .one-use{
+#banner .swiper .microsoft-banner .title .one-use{
   display: inline-block;
   background-color: #046ab5;
-  padding: 8px 15px 8px 13px;
+  padding: 8px 14px 8px 14px;
   margin: 8px 28px 8px 0;
   color: #f9fbfd;
   text-decoration: none;
@@ -581,7 +628,7 @@ header #nav nav{
   border-radius: 2px;
   font-weight: 600;
 }
-#container .swiper .microsoft-banner .title .six-use{
+#banner .swiper .microsoft-banner .title .six-use{
   display: inline-block;
   color: #046ab5;
   font-weight: 600;
@@ -590,8 +637,8 @@ header #nav nav{
   text-decoration: none;
   position: relative;
 }
-#container .swiper .banner .title a:focus::before,
-#container .swiper .microsoft-banner .title .one-use:focus::before{
+#banner .swiper .surface-banner .title a:focus::before,
+#banner .swiper .microsoft-banner .title .one-use:focus::before{
   content: '';
   position: absolute;
   top: 3px;
@@ -600,7 +647,7 @@ header #nav nav{
   right: 3px;
   border: 3px dotted #f9fbfd;
 }
-#container .swiper .microsoft-banner .title .six-use:focus::before{
+#banner .swiper .microsoft-banner .title .six-use:focus::before{
   content: '';
   position: absolute;
   top: -5px;
@@ -609,19 +656,19 @@ header #nav nav{
   right: 12px;
   border: 3px dotted #046ab5;
 }
-#container .swiper .banner .title a:hover,
-#container .swiper .microsoft-banner .title .one-use:hover{
+#banner .swiper .surface-banner .title a:hover,
+#banner .swiper .microsoft-banner .title .one-use:hover{
   background-color: #045fa3;
 }
 
-#container .swiper .microsoft-banner .title .six-use i{
+#banner .swiper .microsoft-banner .title .six-use i{
   margin-left: 5px;
   transition: transform .3s;
 }
-#container .swiper .microsoft-banner .title .six-use:hover i{
+#banner .swiper .microsoft-banner .title .six-use:hover i{
   transform: translateX(5px);
 }
-#container .swiper .microsoft-banner .title .six-use:hover::after{
+#banner .swiper .microsoft-banner .title .six-use:hover::after{
   content: '';
   position: absolute;
   height: 1px;
@@ -631,14 +678,14 @@ header #nav nav{
   background-color: #045fa3;
 }
 
-#container .swiper .swipe-btn{
+#banner .swiper .swipe-btn{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 53px;
+  height: 44px;
 }
-#container .swiper .swipe-btn button{
+#banner .swiper .swipe-btn button{
   border: 0;
   background-color: transparent;
   font-size: 28px;
@@ -647,7 +694,7 @@ header #nav nav{
   position: relative;
   color: #000;
 }
-#container .swiper .swipe-btn button:focus:before{
+#banner .swiper .swipe-btn button:focus:before{
   content: '';
   position: absolute;
   top: -7px;
@@ -656,43 +703,49 @@ header #nav nav{
   right: -8px;
   border: 3px dotted #000;
 }
-#container .swiper .swipe-btn button .fa-chevron-left,
-#container .swiper .swipe-btn button .fa-chevron-right{
+#banner .swiper .swipe-btn button .fa-chevron-left,
+#banner .swiper .swipe-btn button .fa-chevron-right{
   transition: transform .3s;
 }
-#container .swiper .swipe-btn button:hover .fa-chevron-left{
+#banner .swiper .swipe-btn button:hover .fa-chevron-left{
   transform: translateX(-8px);
 }
-#container .swiper .swipe-btn button:hover .fa-chevron-right{
+#banner .swiper .swipe-btn button:hover .fa-chevron-right{
   transform: translateX(8px);
 }
-#container .swiper .swipe-btn .dot{
-  width: 80px;
+#banner .swiper .swipe-btn .dot{
+  width: 90px;
   position: static;
 }
-#container .swiper-pagination-bullet{
+#banner .swiper-pagination-bullet{
   background-color: #000;
+  margin: 0 9px 3px;
+  width: 10.5px;
+  height: 10.5px;
 }
 @media (max-width: 1399px){
-  #container .swiper .banner .title h1,
-  #container .swiper .microsoft-banner .title h2{
+  #banner .swiper .surface-banner .title h1,
+  #banner .swiper .microsoft-banner .title h2{
     font-size: 29px;
   }
 }
 @media (max-width: 1083px){
-  #container .swiper .banner,
-  #container .swiper .microsoft-banner{
+  #banner .swiper{
+    margin-bottom: 53px;
+  }
+  #banner .swiper .surface-banner,
+  #banner .swiper .microsoft-banner{
     position: static;
   }
-  #container .swiper .banner .banner-title,
-  #container .swiper .microsoft-banner .banner-title{
+  #banner .swiper .surface-banner .banner-title,
+  #banner .swiper .microsoft-banner .banner-title{
     padding: 0 12px;
   }
-  #container .swiper .banner .title span{
+  #banner .swiper .surface-banner .title span{
     margin-bottom: 4px;
   }
-  #container .swiper .banner .title,
-  #container .swiper .microsoft-banner .title{
+  #banner .swiper .surface-banner .title,
+  #banner .swiper .microsoft-banner .title{
     position: static;
     width: 100%;
     padding: 48px;
@@ -700,77 +753,81 @@ header #nav nav{
     box-shadow: .5px 2px 3px #ccc,
                 -.8px -.5px 3px #ccc;
     transform: translateY(0px);
-    margin-top: -53px;
+    margin: -54px 0 15px;
   }
-  #container .swiper .microsoft-banner .title{
-    padding: 48px 48px 72px 48px;
+  #banner .swiper .microsoft-banner .title{
+    padding: 44px 48px 40px;
   }
-  #container .swiper .banner .title h1,
-  #container .swiper .microsoft-banner .title h2{
+  #banner .swiper .surface-banner .title h1,
+  #banner .swiper .microsoft-banner .title h2{
     font-size: 24px;
     margin-bottom: 8px;
   }
 }
 @media (max-width: 859px){
-  #container .swiper{
-    margin-bottom: 20px;
+  #banner .swiper{
+    margin-bottom: 5px;
   }
-  #container .swiper .banner .banner-title,
-  #container .swiper .microsoft-banner .banner-title{
+  #banner .swiper .surface-banner .banner-title,
+  #banner .swiper .microsoft-banner .banner-title{
     padding: 0;
   }
-  #container .swiper .banner .title,
-  #container .swiper .microsoft-banner .title{
+  #banner .swiper .surface-banner .title,
+  #banner .swiper .microsoft-banner .title{
     position:static;
     padding: 24px 24px 16px 24px;
     margin-top: -6px;
   }
-  #container .swiper .microsoft-banner .title{
-    padding: 24px 24px 40px 24px;
+  #banner .swiper .microsoft-banner .title{
+    padding: 20px 24px 44px 24px;
+  }
+  #banner .swiper .surface-banner .title h1,
+  #banner .swiper .microsoft-banner .title h2{
+    margin-bottom: 9px;
   }
 }
 @media (max-width: 723px){
-  #container .swiper .microsoft-banner .title{
+  #banner .swiper .microsoft-banner .title{
     padding: 24px 24px 16px 24px;
   }
 }
 @media (max-width: 553px){
-  #container .swiper .microsoft-banner .title{
+  #banner .swiper .microsoft-banner .title{
     padding: 24px 24px 40px 24px;
   }
 }
 @media (max-width: 403px){
-  #container .swiper .microsoft-banner .title{
+  #banner .swiper .microsoft-banner .title{
     padding: 24px 24px 16px 24px;
   }
 }
 
-#container .content{
+
+#container{
   width: 100%;
   padding: 0 8%;
-  
 }
-#container .content .choose{
+#container .choose{
   display: flex;
   justify-content: center;
   margin-bottom: 63px;
 }
-#container .content .choose li img{
+#container .choose li img{
   width: 40px;
 }
-#container .content .choose li{
+#container .choose li{
   margin: 16px 24px;
   text-align: center;
 }
-#container .content .choose li div{
+#container .choose li div{
   margin-bottom: 2px;
 }
-#container .content .choose li a{
+#container .choose li a{
   color: #0067c7;
   font-weight: 600;
   position: relative;
 }
-#container .content .choose li a:focus::before{
+#container .choose li a:focus::before{
   content: '';
   position: absolute;
   top: -5px;
@@ -780,27 +837,29 @@ header #nav nav{
   border: 3px dotted #0067c7;
 }
 @media (max-width: 1800px){
-  #container .content{
+  #container{
     padding: 0 5%;
+  }
+  #container .choose{
+    margin-bottom: 64px;
   }
 }
 @media (max-width: 1083px){
-  #container .content{
+  #container{
     padding: 0;
+  }
+  #container .choose{
+    margin-bottom: 64px;
   }
 }
 @media (max-width: 859px){
-  #container .content .choose{
-    margin-bottom: 15px;
+  #container .choose{
+    margin-bottom: 16px;
+    flex-wrap: wrap;
   }
 }
-@media (max-width: 601px){
-  #container .content .choose{
-    flex-wrap: wrap;
-  }  
-}
 @media (max-width: 384px){
-  #container .content .choose{
+  #container .choose{
     flex-direction: column;
     margin-bottom: 20px;
   }
@@ -835,7 +894,7 @@ header #nav nav{
   margin-bottom: 10px;
 }
 #container .main-card .card .card-body p{
-  margin-bottom: 8px;
+  margin: 5px 0 8px;
   word-break: keep-all;
   word-wrap: break-word;
 }
@@ -880,7 +939,7 @@ header #nav nav{
 @media (max-width: 1083px){
   #container .main-card{
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
     padding: 0 12px;
   }
   #container .main-card .card{
@@ -891,6 +950,17 @@ header #nav nav{
     font-size: 21px;
     margin-bottom: 4px;
     margin-top: 1px;
+  }
+  #container .main-card .card .card-body p{
+    margin: 5px 0 8px;
+  }
+}
+@media (max-width: 859px){
+  #container .main-card{
+    margin-bottom: 0px;
+  }
+  #container .main-card .card .card-body p{
+    margin: 4px 0 8px;
   }
 }
 @media (max-width: 539px){
@@ -957,26 +1027,26 @@ header #nav nav{
   #container .one-drive .one-drive-title{
     position: static;
     width: 100%;
-    padding: 48px;
+    padding: 44px 48px 48px;
     background-color: #fff;
     box-shadow: .5px 2px 3px #ccc,
                 -.8px -.5px 3px #ccc;
     transform: translateY(0);
-    margin: -54px 0 90px 0;
+    margin: -54px 0 92px 0;
   }
   #container .one-drive .one-drive-title h2{
     font-size: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 9px;
   }
 }
 @media (max-width: 859px){
   #container .one-drive{
-    margin-bottom: 45px;
+    margin-bottom: 44px;
   }
   #container .one-drive .one-drive-title{
     box-shadow: none;
-    padding: 48px 0;
-    margin: -6px 0 0 0;
+    padding: 45px 0 48px;
+    margin: -6px 0 0px 0;
   }
 }
 #container .business .main-card{
@@ -998,21 +1068,28 @@ header #nav nav{
   #container .business h2{
     font-size: 24px;
     padding: 0 12px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   #container .main-card .card{
     margin-bottom: 30px;
   }
 }
+@media (max-width: 859px){
+  #container .business h2{
+    margin-bottom: 9px;
+  }
+}
 #container .focus-on{
   display: flex;
   align-items: center;
+  margin-bottom: 12px;
 }
 #container .focus-on div{
-  margin-right: 12px;
+  margin-right: 16px;
 }
 #container .focus-on a{
   width: 32px;
+  height: 32px;
   position: relative;
 }
 #container .focus-on a:focus::before{
@@ -1028,7 +1105,7 @@ header #nav nav{
   width: 100%;
 }
 #container .focus-on a + a{
-  margin-left: 15px;
+  margin-left: 16px;
 }
 
 #container .top{
@@ -1042,13 +1119,16 @@ header #nav nav{
 }
 #container .top a{
   display: inline-block;
-  padding: 9px 17px;
+  padding: 8px 15px 9px 14px;
   background-color: #d9d9d9;
   text-decoration: none;
   color: #000;
   font-weight: 600;
   position: relative;
   border-radius: 2px;
+}
+#container .top a i{
+  padding-right: 8px;
 }
 #container .top a:focus::before{
   content: '';
@@ -1213,7 +1293,7 @@ footer #footer{
   #footer .footer-nav{
     display: flex;
     flex-wrap: wrap;
-    padding: 0 12px;
+    padding: 0px 12px 2px;
   }
   #footer .footer-nav .footer-item{
     width: 33.33%;
@@ -1221,9 +1301,26 @@ footer #footer{
   #footer .footer-nav .footer-item:nth-child(3n+1){
     padding: 0 12px;
   }
+  #footer .footer-nav .footer-item h4{
+    padding: 35.5px 0 2px;
+  }
+  #footer .footer-nav .footer-item .footer-list li{
+    padding: 3px 0 5px;
+  }
   #footer .footer-copyright{
     display: flex;
-    padding: 30px 24px 16px;
+    padding: 30px 24px 18px;
+  }
+  #footer .footer-copyright .copyright li{
+    padding: 0 26.2px 4px 1px;
+  }
+  #footer .footer-copyright .copyright li:last-child{
+    padding: 0 24px 4px 1.6px;
+  }
+}
+@media (max-width: 859px){
+  #footer .footer-nav .footer-item h4{
+    padding: 34.5px 0 3px;
   }
 }
 @media (max-width: 767px){
