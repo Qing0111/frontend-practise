@@ -124,7 +124,7 @@ header #nav nav{
   width: 1228px;
   top: 53px;
   left: 50%;
-  transform: translateX(-41.5%);
+  transform: translateX(-44%);
   display: flex;
   flex-wrap: wrap;
   z-index: 2;
