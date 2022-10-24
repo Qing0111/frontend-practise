@@ -640,6 +640,7 @@ header #nav nav{
   padding: 0 8px;
   cursor: pointer;
   position: relative;
+  color: #000;
 }
 #container .swiper .swipe-btn button:focus:before{
   content: '';
