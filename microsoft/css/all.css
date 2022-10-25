@@ -917,45 +917,45 @@ header #nav nav{
   }
 }
 
-#container{
+#card-wrap{
   width: 100%;
   padding: 0 7.9615%;
 }
-#container .main-card{
+#card-wrap .main-card{
   display: flex;
   justify-content: space-between;
   margin-bottom: 88px;
 }
-#container .main-card .card{
+#card-wrap .main-card .card{
   width: calc((100% - 72px) / 4);
   cursor: pointer;
 }
-#container .main-card .card .card-header {
+#card-wrap .main-card .card .card-header {
   padding-top: 10px;
 }
-#container .main-card .card .card-header span{
+#card-wrap .main-card .card .card-header span{
   display: inline-block;
   padding: 2px 12px;
   background-color: #feb72f;
   font-weight: 600;
   margin-bottom: 0px;
 }
-#container .main-card .card .card-header .null{
+#card-wrap .main-card .card .card-header .null{
   display: inline-block;
   font-size: 0;
   padding: 11px 0;
 }
-#container .main-card .card .card-body h3{
+#card-wrap .main-card .card .card-body h3{
   font-weight: 600;
   font-size: 29px;
   margin-bottom: 12px;
 }
-#container .main-card .card .card-body p{
+#card-wrap .main-card .card .card-body p{
   margin: 5px 0 8px;
   word-break: keep-all;
   word-wrap: break-word;
 }
-#container .main-card .card .card-footer a{
+#card-wrap .main-card .card .card-footer a{
   display: inline-block;
   padding: 16px 0;
   color: #0067b8;
@@ -963,7 +963,7 @@ header #nav nav{
   text-decoration: none;
   position: relative;
 }
-#container .main-card .card .card-footer a:focus::before{
+#card-wrap .main-card .card .card-footer a:focus::before{
   content: '';
   position: absolute;
   top: 13px;
@@ -972,7 +972,7 @@ header #nav nav{
   right: -7px;
   border: 3px dotted #0067b8;
 }
-#container .main-card .card .card-footer a:hover::after{
+#card-wrap .main-card .card .card-footer a:hover::after{
   content: '';
   position: absolute;
   height: 1px;
@@ -981,71 +981,71 @@ header #nav nav{
   right: 17px;
   background-color: #0067b8;
 }
-#container .main-card .card .card-footer a i{
+#card-wrap .main-card .card .card-footer a i{
   padding-left: 5px;
   transition: transform .3s;
 }
-#container .main-card .card .card-footer a:hover i{
+#card-wrap .main-card .card .card-footer a:hover i{
   transform: translateX(3px);
 }
 @media (max-width: 1800px){
-  #container{
+  #card-wrap{
     padding: 0 5%;
   }
 }
 @media (max-width: 1399px){
-  #container .main-card .card .card-body h3{
+  #card-wrap .main-card .card .card-body h3{
     font-size: 24px;
   }
 }
 @media (max-width: 1083px){
-  #container{
+  #card-wrap{
     padding: 0 12px;
   }
-  #container .main-card{
+  #card-wrap .main-card{
     flex-wrap: wrap;
     margin-bottom: 48px;
   }
-  #container .main-card .card{
+  #card-wrap .main-card .card{
     width: calc((100% - 24px) / 2);
     padding-bottom: 10px;
   }
-  #container .main-card .card .card-body h3{
+  #card-wrap .main-card .card .card-body h3{
     font-size: 21px;
     margin-bottom: 4px;
     margin-top: 1px;
   }
-  #container .main-card .card .card-body p{
+  #card-wrap .main-card .card .card-body p{
     margin: 5px 0 8px;
   }
 }
 @media (max-width: 859px){
-  #container .main-card{
+  #card-wrap .main-card{
     margin-bottom: 0px;
   }
-  #container .main-card .card .card-body p{
+  #card-wrap .main-card .card .card-body p{
     margin: 4px 0 8px;
   }
-  #container .main-card .card:nth-child(3) .card-body h3,
-  #container .main-card .card:nth-child(4) .card-body h3{
+  #card-wrap .main-card .card:nth-child(3) .card-body h3,
+  #card-wrap .main-card .card:nth-child(4) .card-body h3{
     margin-bottom: 5px;
     margin-top: 1px;
   }
 }
 @media (max-width: 539px){
-  #container .main-card .card{
+  #card-wrap .main-card .card{
     width: 100%;
     padding-bottom: 10px;
   }
 }
 @media (max-width: 375px){
-  #container .main-card .card .card-body h3{
+  #card-wrap .main-card .card .card-body h3{
     margin-bottom: 5px;
   }
-  #container .main-card .card:nth-child(1) .card-body h3{
+  #card-wrap .main-card .card:nth-child(1) .card-body h3{
     margin-bottom: 4px;
   }
-  #container .main-card .card .card-body p{
+  #card-wrap .main-card .card .card-body p{
     margin: 3px 0 8px;
   }
 }
@@ -1153,62 +1153,62 @@ header #nav nav{
 }
 
 
-#container .business .main-card{
+#card-wrap .business .main-card{
   margin-bottom: 40px;
 }
-#container .business h2{
+#card-wrap .business h2{
   font-size: 37px;
   margin-bottom: 14px;
 }
 @media (max-width: 1399px){
-  #container .business h2{
+  #card-wrap .business h2{
     font-size: 29px;
   }
 }
 @media (max-width: 1083px){
-  #container .business .main-card{
+  #card-wrap .business .main-card{
     margin: 0 0 0px;
   }
-  #container .business h2{
+  #card-wrap .business h2{
     font-size: 24px;
     margin-bottom: 8px;
   }
-  #container .main-card .card{
+  #card-wrap .main-card .card{
     margin-bottom: 30px;
   }
 }
 @media (max-width: 859px){
-  #container .business h2{
+  #card-wrap .business h2{
     margin-bottom: 9px;
   }
 }
 @media (max-width: 375px){
-  #container .one-drive .one-drive-title{
+  #card-wrap .one-drive .one-drive-title{
     padding: 43.8px 0 48px;
   }
-  #container .business .main-card .card:nth-child(1) .card-body h3{
+  #card-wrap .business .main-card .card:nth-child(1) .card-body h3{
     margin-bottom: 5px;
   }
-  #container .business .main-card .card:nth-child(2) .card-body h3,
-  #container .business .main-card .card:nth-child(4) .card-body h3{
+  #card-wrap .business .main-card .card:nth-child(2) .card-body h3,
+  #card-wrap .business .main-card .card:nth-child(4) .card-body h3{
     margin-bottom: 4px;
   }
   
 }
-#container .focus-on{
+#card-wrap .focus-on{
   display: flex;
   align-items: center;
   margin-bottom: 12px;
 }
-#container .focus-on div{
+#card-wrap .focus-on div{
   margin-right: 16px;
 }
-#container .focus-on a{
+#card-wrap .focus-on a{
   width: 32px;
   height: 32px;
   position: relative;
 }
-#container .focus-on a:focus::before{
+#card-wrap .focus-on a:focus::before{
   content: '';
   position: absolute;
   top: -3px;
@@ -1217,10 +1217,10 @@ header #nav nav{
   right: -2px;
   border: 3px dotted #0067b8;
 }
-#container .focus-on a img{
+#card-wrap .focus-on a img{
   width: 100%;
 }
-#container .focus-on a + a{
+#card-wrap .focus-on a + a{
   margin-left: 17px;
 }
 
@@ -1266,7 +1266,7 @@ header #nav nav{
     padding: 0 12px;
     margin: 0 0 60px;
   }
-  #container .focus-on a + a{
+  #card-wrap .focus-on a + a{
     margin-left: 16px;
   }
 }
