@@ -438,9 +438,11 @@ header #nav nav{
   }
   #nav .microsoft-search .drop-down-menu{
     width: 100%;
+    top: 54px;
     left: 0;
     transform: translateY(0px);
     flex-direction: column;
+    border: none;
   }
   #nav .microsoft-search .drop-down-menu > li{
     width: 100%;
@@ -452,25 +454,26 @@ header #nav nav{
   }
   #nav .microsoft-search .drop-down-menu .mobile-menu a{
     display: block;
-    padding: 15px 24px 14px 14px;
+    padding: 15px 24px 14px 16px;
     text-decoration: none;
     color: #000;
     font-size: 15px;
     width: 100%;
-    margin: 1px;
+    margin: 1px 0;
   }
   #nav .microsoft-search .drop-down-menu > li h4{
     font-size: 15px;
     font-weight: normal;
-    padding: 15px 24px 14px 14px;
+    padding: 15px 24px 14px 16px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1px;
+    margin: 1px 0;
   }
   #nav .microsoft-search .drop-down-menu > li h4 i{
     display: block;
+    align-self: flex-end;
   }
   #nav .microsoft-search .drop-down-menu > li ul{
     display: none;
@@ -478,10 +481,7 @@ header #nav nav{
   #nav .microsoft-search .drop-down-menu > li:last-child{
     text-align: start;
     background-color: #f2f2f2;
-    padding: 15px 24px 14px 14px;
     font-size: 15px;
-    cursor: pointer;
-    margin: 1px;
     border-bottom: 1px solid #000;
   }
   #nav .microsoft-search .drop-down-menu > li:last-child a{
@@ -520,9 +520,9 @@ header #nav nav{
     margin: 0;
   }
   #nav .microsoft-search .drop-down-menu li:last-child a{
-    padding: 15px 24px 14px 14px;
+    padding: 15px 24px 15px 16px;
     width: 100%;
-    margin: 1px;
+    margin: 1px 0;
     display: block;
   }
   #nav .microsoft-search .drop-down-menu li:last-child a i{
@@ -547,7 +547,7 @@ header #nav nav{
     padding: 16px 15px 15px 14px;
     position: relative;
     font-size: 15px;
-    margin: 1px;
+    margin: 1px 0;
   }
   #nav .microsoft-search .drop-down-menu #software ~ ul li:first-child a:before,
   #nav .microsoft-search .drop-down-menu #computer ~ ul li:first-child a:before,
@@ -1135,6 +1135,11 @@ header #nav nav{
     margin-bottom: 9px;
   }
 }
+@media (max-width: 375px){
+  #container .one-drive .one-drive-title{
+    padding: 43.8px 0 48px;
+  }
+}
 #container .focus-on{
   display: flex;
   align-items: center;
@@ -1335,6 +1340,13 @@ footer #footer{
   font-size: 12px;
   color: #616161;
 }
+#footer .footer-copyright .copyright li:nth-child(1),
+#footer .footer-copyright .copyright li:nth-child(2){
+  padding: 0 26px 4px 1px;
+}
+#footer .footer-copyright .copyright li:nth-child(3){
+  padding: 0 28px 4px 1px;
+}
 #footer .footer-copyright .copyright li:last-child{
   padding: 0 23.5px 6px 0px;
 }
@@ -1377,6 +1389,17 @@ footer #footer{
   #footer .footer-copyright .copyright li{
     padding: 0 26.2px 4px 1px;
   }
+  #footer .footer-copyright .copyright li:nth-child(1),
+  #footer .footer-copyright .copyright li:nth-child(2){
+    padding: 0 26.3px 4px 1px;
+  }
+  #footer .footer-copyright .copyright li:nth-child(3){
+    padding: 0 26.3px 4px 1px;
+  }
+  #footer .footer-copyright .copyright li:nth-child(4),
+  #footer .footer-copyright .copyright li:nth-child(5){
+    padding: 0 26px 4px 1px;
+  }
   #footer .footer-copyright .copyright li:last-child{
     padding: 0 24px 4px 1.6px;
   }
@@ -1397,6 +1420,9 @@ footer #footer{
   #footer .footer-copyright .copyright li{
     padding: 6px 7px 0 6px;
   }
+  #footer .footer-copyright .copyright li:last-child{
+    padding: 6px 7px 0 6px;
+  }
 }
 @media (max-width: 539px){
   #footer .footer-nav .footer-item{
@@ -1407,5 +1433,34 @@ footer #footer{
   }
   #footer .footer-copyright .copyright{
     flex-wrap: wrap;
+  }
+  #footer .footer-copyright .copyright li:last-child{
+    padding: 6px 13px 0 0;
+  }
+}
+@media (max-width: 375px){
+  #footer .footer-nav{
+    padding: 0 12px;
+  }
+  #footer .footer-nav .footer-item h4{
+    padding: 35px 0 2.5px;
+  }
+  #footer .footer-copyright{
+    padding: 33px 24px 18px;
+  }
+  #footer .footer-copyright .copyright{
+    padding-top: 12px;
+  }
+  #footer .footer-copyright .copyright li:nth-child(1),
+  #footer .footer-copyright .copyright li:nth-child(2),
+  #footer .footer-copyright .copyright li:nth-child(3),
+  #footer .footer-copyright .copyright li:nth-child(4){
+    padding: 6px 13.3px 0 0px;
+  }
+  #footer .footer-copyright .copyright li:nth-child(5){
+    padding: 4px 13.3px 0 0;
+  }
+  #footer .footer-copyright .copyright li:last-child{
+    padding: 4px 13px 0 0;
   }
 }
