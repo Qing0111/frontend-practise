@@ -1244,8 +1244,10 @@ header #nav nav{
   }
 }
 @media (max-width: 539px){
-  #to-top .top{
+  #to-top{
     position: static;
+  }
+  #to-top .top{
     margin: 0 0 60px;
   }
   #to-top .top a{
