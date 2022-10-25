@@ -49,13 +49,13 @@ header #nav nav{
 #nav .logo-nav .list li a{
   display: inline-block;
   margin-top: 1px;
-  padding: 16px 5px 15px 13px;
+  padding: 16px 5px 15px 14.5px;
   text-decoration: none;
   color: #262626;
   font-size: 13px;
 }
 #nav .logo-nav .list li + li{
-  margin-left: 12px;
+  margin-left: 10px;
 }
 #nav .microsoft-search .all .all-btn label span{
   border-bottom: 2px solid transparent;
@@ -105,7 +105,7 @@ header #nav nav{
 }
 #nav .microsoft-search .all .all-btn label{
   display: inline-block;
-  padding: 16px 15px 16px 15px;
+  padding: 18px 15.5px 14px 14px;
   cursor: pointer;
   display: flex;
 }
@@ -134,9 +134,9 @@ header #nav nav{
 #nav .microsoft-search .drop-down-menu{
   position: absolute;
   width: 1228px;
-  top: 53px;
+  top: 52px;
   left: 50%;
-  transform: translateX(-41.5%);
+  transform: translateX(-41.95%);
   display: flex;
   flex-wrap: wrap;
   z-index: 2;
@@ -148,15 +148,17 @@ header #nav nav{
 #nav .microsoft-search .drop-down-menu > li{
   padding-bottom: 10px;
 }
-#nav .microsoft-search .drop-down-menu > li:last-child{
-  padding-bottom: 0;
-}
 #nav .microsoft-search .drop-down-menu .mobile-menu{
   display: none;
 }
 #nav .microsoft-search .drop-down-menu > li a{
   width: 195px;
   padding: 12px 0 12px 24px;
+}
+@media (max-width: 1450px){
+  #nav .microsoft-search .drop-down-menu{
+    transform: translateX(-50%);
+  }
 }
 @media (max-width: 1399px){
   #nav .microsoft-search .drop-down-menu{
@@ -187,25 +189,27 @@ header #nav nav{
   width: 100%;
   text-align: center;
   background-color: #e6e6e6;
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 3px 0 0;
 }
 #nav .microsoft-search .drop-down-menu > li:last-child a{
   display: inline-block;
-  padding: 8px 0 8px 24px;
+  padding: 8px 2px 8px 22px;
   text-decoration: none;
   color: #262626;
+}
+#nav .microsoft-search .drop-down-menu > li:last-child a i{
+  margin-left: 3px;
 }
 #nav .microsoft-search .drop-down-menu > li h4 i{
   display: none;
 }
 #nav .microsoft-search .search{
-  padding: 15px 9px 16px;
+  padding: 17px 10px 16px 5px;
 }
 #nav .microsoft-search .search i{
   font-size: 15px;
-}
-#nav .user-info .shop i{
-  font-size: 14px;
+  margin-left: 5.5px;
 }
 #nav .microsoft-search .search,
 #nav .user-info .shop,
@@ -216,17 +220,21 @@ header #nav nav{
   display: flex;
 }
 #nav .user-info .shop{
-  padding: 15px 9px 16px;
+  padding: 14px 8px 16px 7px;
+}
+#nav .user-info .shop i{
+  font-size: 14px;
+  margin-left: 2px;
 }
 #nav .user-info .personal{
   display: flex;
 }
 #nav .user-info .personal .login{
-  padding: 15px 11px 16px 9px;
+  padding: 15px 12.5px 16px 8.5px;
 }
 #nav .user-info .personal .user{
-  margin-right: 8px;
-  padding: 8px 0px 0px;
+  margin-right: 7px;
+  padding: 9px 0px 0px;
   width: 32px;
 }
 #nav .user-info .personal .user img{
@@ -279,17 +287,26 @@ header #nav nav{
   #nav .logo-nav .list li + li{
     margin-left: 0px;
   }
-  #nav .logo-nav .list li:nth-child(6) a{
-    padding: 16px 11.6px 15px 6px;
-  }
+  /* #nav .logo-nav .list li:nth-child(6) a{
+    padding: 16px 11.6px 15px 10px;
+  } */
   #nav .microsoft-search .all .all-btn label{
     padding: 18px 9px 15px 15px;
+  }
+  #nav .microsoft-search .drop-down-menu > li a{
+    width: 200px;
   }
   #nav .microsoft-search .search{
     padding: 17px 9px 15px 9px;
   }
+  #nav .microsoft-search .search i{
+    margin-left: 0px;
+  }
   #nav .user-info .shop{
-    padding: 15px 9px 16px 13px;
+    padding: 14px 9px 16px 13px;
+  }
+  #nav .user-info .shop i{
+    margin-left: 0px;
   }
   #nav .user-info .personal .user{
     padding: 9px 0px 0px;
@@ -465,6 +482,7 @@ header #nav nav{
     font-size: 15px;
     cursor: pointer;
     margin: 1px;
+    border-bottom: 1px solid #000;
   }
   #nav .microsoft-search .drop-down-menu > li:last-child a{
     padding: 0;
@@ -575,19 +593,19 @@ header #nav nav{
   position: absolute;
   width: 30%;
   top: 50%;
-  left: 59.5%;
+  left: 59.53%;
   transform: translateY(-51.5%);
 }
 #banner .swiper .microsoft-banner .title{
   position: absolute;
   width: 30%;
   top: 50%;
-  left: 10.5%;
-  transform: translateY(-51.5%);
+  left: 10.48%;
+  transform: translateY(-51%);
 }
 #banner .swiper .surface-banner .title span{
   display: inline-block;
-  padding: 2px 12px;
+  padding: 2px 12px 2px 12px;
   margin-bottom: 2px;
   background-color: #feb72f;
   font-weight: 600;
@@ -596,7 +614,12 @@ header #nav nav{
 #banner .swiper .microsoft-banner .title h2{
   font-weight: 600;
   font-size: 37px;
-  margin-bottom: 14.5px;
+}
+#banner .swiper .surface-banner .title h1{
+  margin-bottom: 15px;
+}
+#banner .swiper .microsoft-banner .title h2{
+  margin-bottom: 15px;
 }
 #banner .swiper .surface-banner .title p,
 #banner .swiper .microsoft-banner .title p{
@@ -620,8 +643,8 @@ header #nav nav{
 #banner .swiper .microsoft-banner .title .one-use{
   display: inline-block;
   background-color: #046ab5;
-  padding: 8px 14px 8px 14px;
-  margin: 8px 28px 8px 0;
+  padding: 8px 14px 8px 13px;
+  margin: 8px 28px 8px 1px;
   color: #f9fbfd;
   text-decoration: none;
   position: relative;
@@ -632,7 +655,7 @@ header #nav nav{
   display: inline-block;
   color: #046ab5;
   font-weight: 600;
-  padding: 8px 21px 8px 0;
+  padding: 8px 21px 8px 0.5px;
   position: relative;
   text-decoration: none;
   position: relative;
@@ -677,13 +700,13 @@ header #nav nav{
   bottom: 12px;
   background-color: #045fa3;
 }
-
 #banner .swiper .swipe-btn{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 44px;
+  margin-top: 9px;
 }
 #banner .swiper .swipe-btn button{
   border: 0;
@@ -763,6 +786,13 @@ header #nav nav{
     font-size: 24px;
     margin-bottom: 8px;
   }
+  #banner .swiper .microsoft-banner .title .one-use{
+    padding: 8px 14px 8px 14px;
+    margin: 8px 28px 8px 0px;
+  }
+  #banner .swiper .swipe-btn{
+    margin-top: 0px;
+  }
 }
 @media (max-width: 859px){
   #banner .swiper{
@@ -791,7 +821,7 @@ header #nav nav{
     padding: 24px 24px 16px 24px;
   }
 }
-@media (max-width: 553px){
+/* @media (max-width: 553px){
   #banner .swiper .microsoft-banner .title{
     padding: 24px 24px 40px 24px;
   }
@@ -800,17 +830,27 @@ header #nav nav{
   #banner .swiper .microsoft-banner .title{
     padding: 24px 24px 16px 24px;
   }
+} */
+@media (max-width: 385px){
+  #banner .swiper .microsoft-banner .title .six-use{
+    padding: 8px 10px 8px 0px;
+  }
+}
+@media (max-width: 375px){
+  #banner .swiper .microsoft-banner .title{
+    padding: 20px 24px 20px 24px;
+  }
 }
 
 
 #container{
   width: 100%;
-  padding: 0 8%;
+  padding: 0 7.9615%;
 }
 #container .choose{
   display: flex;
   justify-content: center;
-  margin-bottom: 63px;
+  margin-bottom: 64px;
 }
 #container .choose li img{
   width: 40px;
@@ -864,10 +904,17 @@ header #nav nav{
     margin-bottom: 20px;
   }
 }
+@media (max-width: 375px){
+  #container .choose{
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+}
+
 #container .main-card{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 88px;
 }
 #container .main-card .card{
   width: calc((100% - 72px) / 4);
@@ -891,7 +938,8 @@ header #nav nav{
 #container .main-card .card .card-body h3{
   font-weight: 600;
   font-size: 29px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+
 }
 #container .main-card .card .card-body p{
   margin: 5px 0 8px;
@@ -971,19 +1019,22 @@ header #nav nav{
 }
 #container .one-drive{
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 84px;
+}
+#container .one-drive .one-drive-img{
+  width: 1596px;
 }
 #container .one-drive .one-drive-title{
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  left: 6.7%;
+  transform: translateY(-53.5%);
+  left: 6%;
   width: 25%;
 }
 #container .one-drive .one-drive-title h2{
   font-size: 37px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 #container .one-drive .one-drive-title p{
   margin-bottom: 24px;
@@ -1010,6 +1061,11 @@ header #nav nav{
 }
 #container .one-drive .one-drive-title a:hover{
   background-color: #045fa3;
+}
+@media (max-width: 1900px){
+  #container .one-drive .one-drive-img{
+    width: 100%;
+  }
 }
 @media (max-width: 1399px){
   #container .one-drive .one-drive-title h2{
@@ -1050,11 +1106,11 @@ header #nav nav{
   }
 }
 #container .business .main-card{
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 #container .business h2{
   font-size: 37px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 @media (max-width: 1399px){
   #container .business h2{
@@ -1105,16 +1161,16 @@ header #nav nav{
   width: 100%;
 }
 #container .focus-on a + a{
-  margin-left: 16px;
+  margin-left: 17px;
 }
 
 #container .top{
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 0 -8.8% 60px;
+  margin: 0 -8.7% 60px;
   position: sticky;
-  bottom: 10px;
+  bottom: 12px;
   right: 0;
 }
 #container .top a{
@@ -1156,6 +1212,9 @@ header #nav nav{
     padding: 0 12px;
     margin: 0 0 60px;
   }
+  #container .focus-on a + a{
+    margin-left: 16px;
+  }
 }
 @media (max-width: 539px){
   #container .top{
@@ -1175,7 +1234,7 @@ footer #footer{
 }
 #footer .footer-nav{
   display: flex;
-  padding: 0 8%;
+  padding: 0 7.9615%;
 }
 #footer .footer-nav .footer-item{
   width: 17%;
@@ -1189,12 +1248,13 @@ footer #footer{
 }
 #footer .footer-nav .footer-item h4{
   font-weight: 600;
-  padding: 34px 0 4px;
+  padding: 35px 0 2px;
   color: #616161;
   font-size: 15px;
 }
+
 #footer .footer-nav .footer-item .footer-list li{
-  padding: 4px 0;
+  padding: 3px 0 5px;
 }
 #footer .footer-nav .footer-item .footer-list li a{
   display: inline-block;
@@ -1235,7 +1295,7 @@ footer #footer{
 #footer .footer-copyright{
   display: flex;
   justify-content: space-between;
-  padding: 30px 8% 16px;
+  padding: 32px 8% 16px;
 }
 #footer .footer-copyright .chinese a{
   display: flex;
@@ -1271,9 +1331,12 @@ footer #footer{
   display: flex;
 }
 #footer .footer-copyright .copyright li{
-  padding: 0 26px 4px 0;
+  padding: 0 27px 6px 0px;
   font-size: 12px;
   color: #616161;
+}
+#footer .footer-copyright .copyright li:last-child{
+  padding: 0 23.5px 6px 0px;
 }
 #footer .footer-copyright .chinese a,
 #footer .footer-copyright .copyright li a{
