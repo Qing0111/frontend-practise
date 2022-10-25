@@ -1437,13 +1437,8 @@ footer #footer{
     display: flex;
     padding: 30px 24px 18px;
   }
-  #footer .footer-copyright .copyright li{
-    padding: 0 26.2px 4px 1px;
-  }
   #footer .footer-copyright .copyright li:nth-child(1),
-  #footer .footer-copyright .copyright li:nth-child(2){
-    padding: 0 26.3px 4px 1px;
-  }
+  #footer .footer-copyright .copyright li:nth-child(2),
   #footer .footer-copyright .copyright li:nth-child(3){
     padding: 0 26.3px 4px 1px;
   }
@@ -1467,8 +1462,13 @@ footer #footer{
   #footer .footer-copyright .copyright{
     width: 100%;
     padding-top: 10px;
+    flex-wrap: wrap;
   }
-  #footer .footer-copyright .copyright li{
+  #footer .footer-copyright .copyright li:nth-child(1),
+  #footer .footer-copyright .copyright li:nth-child(2),
+  #footer .footer-copyright .copyright li:nth-child(3),
+  #footer .footer-copyright .copyright li:nth-child(4),
+  #footer .footer-copyright .copyright li:nth-child(5){
     padding: 6px 7px 0 6px;
   }
   #footer .footer-copyright .copyright li:last-child{
@@ -1479,11 +1479,12 @@ footer #footer{
   #footer .footer-nav .footer-item{
     width: 100%;
   }
-  #footer .footer-copyright .copyright li{
+  #footer .footer-copyright .copyright li:nth-child(1),
+  #footer .footer-copyright .copyright li:nth-child(2),
+  #footer .footer-copyright .copyright li:nth-child(3),
+  #footer .footer-copyright .copyright li:nth-child(4),
+  #footer .footer-copyright .copyright li:nth-child(5){
     padding: 6px 13px 0 0;
-  }
-  #footer .footer-copyright .copyright{
-    flex-wrap: wrap;
   }
   #footer .footer-copyright .copyright li:last-child{
     padding: 6px 13px 0 0;
