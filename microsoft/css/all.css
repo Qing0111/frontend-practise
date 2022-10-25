@@ -57,9 +57,9 @@ header #nav nav{
 #nav .logo-nav .list li + li{
   margin-left: 10px;
 }
-#nav .logo-nav .list li:nth-child(6) a{
-  /* padding: 16px 5px 15px 11px; */
-}
+/* #nav .logo-nav .list li:nth-child(6) a{
+  padding: 16px 5px 15px 11px;
+} */
 #nav .microsoft-search .all .all-btn label span{
   border-bottom: 2px solid transparent;
 }
@@ -291,9 +291,9 @@ header #nav nav{
   #nav .logo-nav .list li + li{
     margin-left: 0px;
   }
-  #nav .logo-nav .list li:nth-child(6) a{
-    /* padding: 16px 11.6px 15px 6px; */
-  }
+  /* #nav .logo-nav .list li:nth-child(6) a{
+    padding: 16px 11.6px 15px 6px;
+  } */
   #nav .microsoft-search .all .all-btn label{
     padding: 18px 9px 15px 15px;
   }
