@@ -57,6 +57,9 @@ header #nav nav{
 #nav .logo-nav .list li + li{
   margin-left: 10px;
 }
+#nav .logo-nav .list li:nth-child(6) a{
+  padding: 16px 5px 15px 11px;
+}
 #nav .microsoft-search .all .all-btn label span{
   border-bottom: 2px solid transparent;
 }
@@ -287,9 +290,9 @@ header #nav nav{
   #nav .logo-nav .list li + li{
     margin-left: 0px;
   }
-  /* #nav .logo-nav .list li:nth-child(6) a{
-    padding: 16px 11.6px 15px 10px;
-  } */
+  #nav .logo-nav .list li:nth-child(6) a{
+    padding: 16px 11.6px 15px 6px;
+  }
   #nav .microsoft-search .all .all-btn label{
     padding: 18px 9px 15px 15px;
   }
@@ -840,34 +843,37 @@ header #nav nav{
   #banner .swiper .microsoft-banner .title{
     padding: 20px 24px 20px 24px;
   }
+  #banner .swiper .microsoft-banner .title .one-use{
+    margin: 8px 28.5px 8px 0px;
+  }
 }
 
 
-#container{
+#choose-thing{
   width: 100%;
   padding: 0 7.9615%;
 }
-#container .choose{
+#choose-thing .choose{
   display: flex;
   justify-content: center;
   margin-bottom: 64px;
 }
-#container .choose li img{
+#choose-thing .choose li img{
   width: 40px;
 }
-#container .choose li{
+#choose-thing .choose li{
   margin: 16px 24px;
   text-align: center;
 }
-#container .choose li div{
+#choose-thing .choose li div{
   margin-bottom: 2px;
 }
-#container .choose li a{
+#choose-thing .choose li a{
   color: #0067c7;
   font-weight: 600;
   position: relative;
 }
-#container .choose li a:focus::before{
+#choose-thing .choose li a:focus::before{
   content: '';
   position: absolute;
   top: -5px;
@@ -877,40 +883,44 @@ header #nav nav{
   border: 3px dotted #0067c7;
 }
 @media (max-width: 1800px){
-  #container{
+  #choose-thing{
     padding: 0 5%;
   }
-  #container .choose{
+  #choose-thing .choose{
     margin-bottom: 64px;
   }
 }
 @media (max-width: 1083px){
-  #container{
+  #choose-thing{
     padding: 0;
   }
-  #container .choose{
+  #choose-thing .choose{
     margin-bottom: 64px;
   }
 }
 @media (max-width: 859px){
-  #container .choose{
+  #choose-thing .choose{
     margin-bottom: 16px;
     flex-wrap: wrap;
   }
 }
 @media (max-width: 384px){
-  #container .choose{
+  #choose-thing .choose{
     flex-direction: column;
     margin-bottom: 20px;
   }
 }
 @media (max-width: 375px){
-  #container .choose{
+  #choose-thing .choose{
     flex-direction: column;
     margin-bottom: 16px;
   }
 }
 
+#container{
+  width: 100%;
+  padding: 0 7.9615%;
+}
 #container .main-card{
   display: flex;
   justify-content: space-between;
@@ -979,12 +989,20 @@ header #nav nav{
 #container .main-card .card .card-footer a:hover i{
   transform: translateX(3px);
 }
+@media (max-width: 1800px){
+  #container{
+    padding: 0 5%;
+  }
+}
 @media (max-width: 1399px){
   #container .main-card .card .card-body h3{
     font-size: 24px;
   }
 }
 @media (max-width: 1083px){
+  #container{
+    padding: 0;
+  }
   #container .main-card{
     flex-wrap: wrap;
     margin-bottom: 48px;
