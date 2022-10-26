@@ -777,7 +777,8 @@ header #nav nav{
     width: 100%;
     padding: 48px;
     background-color: #fff;
-    box-shadow: .5px 2px 3px #ccc;
+    box-shadow: .5px 2px 3px #ccc,
+                -0.5px 0 3px #ccc;
     transform: translateY(0px);
     margin: -54px 0 15px;
   }
@@ -1058,10 +1059,6 @@ header #nav nav{
   position: relative;
   margin-bottom: 84px;
 }
-#one-drive-banner .one-drive .one-drive-img{
-  width: 1596px;
-  text-align: center;
-}
 #one-drive-banner .one-drive .one-drive-title{
   position: absolute;
   top: 50%;
@@ -1100,11 +1097,6 @@ header #nav nav{
 #one-drive-banner .one-drive .one-drive-title a:hover{
   background-color: #045fa3;
 }
-@media (max-width: 1900px){
-  #one-drive-banner .one-drive .one-drive-img{
-    width: 100%;
-  }
-}
 @media (max-width: 1800px){
   #one-drive-banner{
     padding: 0 5%;
@@ -1132,7 +1124,7 @@ header #nav nav{
     padding: 44px 48px 48px;
     background-color: #fff;
     box-shadow: .5px 2px 3px #ccc,
-                -.8px -.5px 3px #ccc;
+                -0.5px 0 3px #ccc;
     transform: translateY(0);
     margin: -54px 0 92px 0;
   }
