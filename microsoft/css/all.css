@@ -1054,16 +1054,21 @@ header #nav nav{
 #one-drive-banner{
   width: 100%;
   padding: 0 7.9615%;
+  display: flex;
+  justify-content: center;
 }
 #one-drive-banner .one-drive{
   position: relative;
   margin-bottom: 84px;
 }
+#one-drive-banner .one-drive .one-drive-img{
+  width: 1596px;
+}
 #one-drive-banner .one-drive .one-drive-title{
   position: absolute;
   top: 50%;
   transform: translateY(-53.5%);
-  left: 6%;
+  left: 5.9%;
   width: 25%;
 }
 #one-drive-banner .one-drive .one-drive-title h2{
@@ -1096,6 +1101,11 @@ header #nav nav{
 }
 #one-drive-banner .one-drive .one-drive-title a:hover{
   background-color: #045fa3;
+}
+@media (max-width: 1900px){
+  #one-drive-banner .one-drive .one-drive-img{
+    width: 100%;
+  }
 }
 @media (max-width: 1800px){
   #one-drive-banner{
