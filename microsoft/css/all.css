@@ -287,6 +287,7 @@ header #nav nav{
   }
   #nav .logo-nav .list li a{
     padding: 16px 11.6px 15px 10px;
+    /* padding: 16px 8px 15px 10px; */
   }
   #nav .logo-nav .list li + li{
     margin-left: 0px;
@@ -458,7 +459,7 @@ header #nav nav{
   }
   #nav .microsoft-search .drop-down-menu .mobile-menu a{
     display: block;
-    padding: 15px 24px 14px 16px;
+    padding: 15px 21px 14px 16px;
     text-decoration: none;
     color: #000;
     font-size: 15px;
@@ -468,7 +469,7 @@ header #nav nav{
   #nav .microsoft-search .drop-down-menu > li h4{
     font-size: 15px;
     font-weight: normal;
-    padding: 15px 24px 14px 16px;
+    padding: 15px 21px 14px 16px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -524,7 +525,7 @@ header #nav nav{
     margin: 0;
   }
   #nav .microsoft-search .drop-down-menu li:last-child a{
-    padding: 15px 24px 15px 16px;
+    padding: 15px 21px 15px 16px;
     width: 100%;
     margin: 1px 0;
     display: block;
@@ -1153,6 +1154,20 @@ header #nav nav{
     margin: -6px 0 0px 0;
   }
 }
+@media (max-width: 767px){
+  #one-drive-banner .one-drive .one-drive-title h2{
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 375px){
+  #one-drive-banner .one-drive .one-drive-title{
+    padding: 43px 0 48px;
+    margin: -5.1px 0 0px 0;
+  }
+  #one-drive-banner .one-drive .one-drive-title h2{
+    margin-bottom: 9px;
+  }
+}
 
 
 #card-wrap .business .main-card{
@@ -1184,14 +1199,25 @@ header #nav nav{
     margin-bottom: 9px;
   }
 }
-@media (max-width: 375px){
-  #card-wrap .one-drive .one-drive-title{
-    padding: 43.8px 0 48px;
+@media (max-width: 767px){
+  #card-wrap .business h2{
+    margin-bottom: 9.5px;
   }
-  #card-wrap .business .main-card .card:nth-child(1) .card-body h3{
+  #card-wrap .business .main-card .card:nth-child(1) .card-body h3,
+  #card-wrap .business .main-card .card:nth-child(2) .card-body h3{
     margin-bottom: 5px;
   }
-  #card-wrap .business .main-card .card:nth-child(2) .card-body h3,
+  #card-wrap .business .main-card .card:nth-child(3) .card-body h3,
+  #card-wrap .business .main-card .card:nth-child(4) .card-body h3{
+    margin-bottom: 4px;
+  }
+}
+@media (max-width: 375px){
+  #card-wrap .business h2{
+    margin-bottom: 9px;
+  }
+  #card-wrap .business .main-card .card:nth-child(1) .card-body h3,
+  #card-wrap .business .main-card .card:nth-child(3) .card-body h3,
   #card-wrap .business .main-card .card:nth-child(4) .card-body h3{
     margin-bottom: 4px;
   }
@@ -1456,23 +1482,32 @@ footer #footer{
   #footer .footer-nav .footer-item h4{
     padding: 34.5px 0 3px;
   }
+  #footer .footer-copyright .copyright li:nth-child(5){
+    padding: 0 25.5px 4px 1.5px;
+  }
 }
 @media (max-width: 767px){
+  #footer .footer-nav .footer-item h4{
+    padding: 35px 0 2.5px;
+  }
   #footer .footer-copyright{
     flex-wrap: wrap;
   }
   #footer .footer-copyright .copyright{
     width: 100%;
-    padding-top: 10px;
+    padding-top: 13px;
     flex-wrap: wrap;
+  }
+
+  #footer .footer-copyright .copyright li:nth-child(3){
+    padding: 6px 7px 0 6.5px;
+  }
+  #footer .footer-copyright .copyright li:nth-child(4),
+  #footer .footer-copyright .copyright li:nth-child(5){
+    padding: 6px 7.5px 0 6px;
   }
   #footer .footer-copyright .copyright li:nth-child(1),
   #footer .footer-copyright .copyright li:nth-child(2),
-  #footer .footer-copyright .copyright li:nth-child(3),
-  #footer .footer-copyright .copyright li:nth-child(4),
-  #footer .footer-copyright .copyright li:nth-child(5){
-    padding: 6px 7px 0 6px;
-  }
   #footer .footer-copyright .copyright li:last-child{
     padding: 6px 7px 0 6px;
   }
