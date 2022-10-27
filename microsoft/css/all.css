@@ -1071,7 +1071,6 @@ header #nav nav{
 #one-drive-banner .one-drive .one-drive-title p{
   margin-bottom: 24px;
   word-break: keep-all;
-  overflow-wrap: break-word;
   word-wrap: break-word;
 }
 #one-drive-banner .one-drive .one-drive-title a{
@@ -1103,6 +1102,7 @@ header #nav nav{
 @media (max-width: 1800px){
   #one-drive-banner{
     padding: 0 5%;
+    display: block;
   }
 }
 @media (max-width: 1399px){
