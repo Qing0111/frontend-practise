@@ -1095,6 +1095,9 @@ header #nav nav{
   background-color: #045fa3;
 }
 @media (max-width: 1900px){
+  #one-drive-banner{
+    display: block;
+  }
   #one-drive-banner .one-drive .one-drive-img{
     width: 100%;
   }
@@ -1102,7 +1105,6 @@ header #nav nav{
 @media (max-width: 1800px){
   #one-drive-banner{
     padding: 0 5%;
-    display: block;
   }
 }
 @media (max-width: 1399px){
