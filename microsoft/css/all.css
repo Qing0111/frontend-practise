@@ -599,21 +599,22 @@ header #nav nav{
   position: absolute;
   width: 30%;
   top: 50%;
-  left: 59.53%;
-  transform: translateY(-51.5%);
+  left: 10.48%;
+  transform: translateY(-51%);
 }
 #banner .swiper .microsoft-banner .title{
   position: absolute;
   width: 30%;
   top: 50%;
-  left: 10.48%;
-  transform: translateY(-51%);
+  left: 59.53%;
+  transform: translateY(-51.5%);
 }
 #banner .swiper .surface-banner .title span{
   display: inline-block;
   padding: 2px 12px 2px 12px;
   margin-bottom: 2px;
-  background-color: #feb72f;
+  background-color: #fff;
+  color: #950c17;
   font-weight: 600;
 }
 #banner .swiper .surface-banner .title h1,
@@ -630,7 +631,7 @@ header #nav nav{
 #banner .swiper .surface-banner .title p,
 #banner .swiper .microsoft-banner .title p{
   margin-bottom: 24px;
-  word-break: keep-all;
+  /* word-break: keep-all; */
   word-wrap: break-word;
 }
 #banner .swiper .microsoft-banner .title p{
@@ -639,7 +640,7 @@ header #nav nav{
 #banner .swiper .surface-banner .title a{
   display: inline-block;
   padding: 8px 14px;
-  background-color: #046ab5;
+  background-color: #000;
   font-weight: 800;
   color: #f9fbfd;
   text-decoration: none;
@@ -648,7 +649,7 @@ header #nav nav{
 }
 #banner .swiper .microsoft-banner .title .one-use{
   display: inline-block;
-  background-color: #046ab5;
+  background-color: #000;
   padding: 8px 14px 8px 13px;
   margin: 8px 28px 8px 1px;
   color: #f9fbfd;
@@ -659,7 +660,7 @@ header #nav nav{
 }
 #banner .swiper .microsoft-banner .title .six-use{
   display: inline-block;
-  color: #046ab5;
+  color: #000;
   font-weight: 600;
   padding: 8px 21px 8px 0.5px;
   position: relative;
@@ -683,11 +684,11 @@ header #nav nav{
   bottom: -5px;
   left: -3px;
   right: 12px;
-  border: 3px dotted #046ab5;
+  border: 3px dotted #000;
 }
 #banner .swiper .surface-banner .title a:hover,
 #banner .swiper .microsoft-banner .title .one-use:hover{
-  background-color: #045fa3;
+  box-shadow: 0px .3px .1px rgb(87, 86, 86);
 }
 
 #banner .swiper .microsoft-banner .title .six-use i{
@@ -704,7 +705,7 @@ header #nav nav{
   left: 0;
   right: 38px;
   bottom: 12px;
-  background-color: #045fa3;
+  background-color: #000;
 }
 #banner .swiper .swipe-btn{
   width: 100%;
@@ -862,7 +863,7 @@ header #nav nav{
   margin-bottom: 2px;
 }
 #choose-thing .choose li a{
-  color: #0067c7;
+  color: #000;
   font-weight: 600;
   position: relative;
 }
@@ -873,7 +874,7 @@ header #nav nav{
   bottom: -5px;
   left: -4px;
   right: -4px;
-  border: 3px dotted #0067c7;
+  border: 3px dotted #000;
 }
 @media (max-width: 1800px){
   #choose-thing{
@@ -929,9 +930,10 @@ header #nav nav{
 .card-wrap .main-card .card .card-header span{
   display: inline-block;
   padding: 2px 12px;
-  background-color: #feb72f;
+  background-color: #950c17;
   font-weight: 600;
   margin-bottom: 0px;
+  color: #fff;
 }
 .card-wrap .main-card .card .card-header .null{
   display: inline-block;
@@ -941,17 +943,18 @@ header #nav nav{
 .card-wrap .main-card .card .card-body h3{
   font-weight: 600;
   font-size: 29px;
-  margin-bottom: 12px;
+  margin: 4px 0 12px;
+  line-height: 1.2;
 }
 .card-wrap .main-card .card .card-body p{
-  margin: 5px 0 8px;
-  word-break: keep-all;
+  margin: 16px 0 8px;
+  /* word-break: keep-all; */
   word-wrap: break-word;
 }
 .card-wrap .main-card .card .card-footer a{
   display: inline-block;
   padding: 16px 0;
-  color: #0067b8;
+  color: #950c17;
   font-weight: 600;
   text-decoration: none;
   position: relative;
@@ -963,7 +966,7 @@ header #nav nav{
   bottom: 13px;
   left: -3px;
   right: -7px;
-  border: 3px dotted #0067b8;
+  border: 3px dotted #950c17;
 }
 .card-wrap .main-card .card .card-footer a:hover::after{
   content: '';
@@ -972,7 +975,7 @@ header #nav nav{
   bottom: 20px;
   left: 0;
   right: 17px;
-  background-color: #0067b8;
+  background-color: #950c17;
 }
 .card-wrap .main-card .card .card-footer a i{
   padding-left: 5px;
@@ -1005,11 +1008,11 @@ header #nav nav{
   }
   .card-wrap .main-card .card .card-body h3{
     font-size: 21px;
-    margin-bottom: 4px;
-    margin-top: 1px;
+    margin:4px 0 4px;
+
   }
   .card-wrap .main-card .card .card-body p{
-    margin: 5px 0 8px;
+    margin: 8px 0 8px;
   }
 }
 @media (max-width: 859px){
@@ -1017,12 +1020,12 @@ header #nav nav{
     margin-bottom: 0px;
   }
   .card-wrap .main-card .card .card-body p{
-    margin: 4px 0 8px;
+    /* margin: 4px 0 8px; */
   }
   .card-wrap .main-card .card:nth-child(3) .card-body h3,
   .card-wrap .main-card .card:nth-child(4) .card-body h3{
-    margin-bottom: 5px;
-    margin-top: 1px;
+    /* margin-bottom: 5px;
+    margin-top: 1px; */
   }
 }
 @media (max-width: 539px){
@@ -1033,13 +1036,13 @@ header #nav nav{
 }
 @media (max-width: 375px){
   .card-wrap .main-card .card .card-body h3{
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
   }
   .card-wrap .main-card .card:nth-child(1) .card-body h3{
-    margin-bottom: 4px;
+    /* margin-bottom: 4px; */
   }
   .card-wrap .main-card .card .card-body p{
-    margin: 3px 0 8px;
+    /* margin: 3px 0 8px; */
   }
 }
 
@@ -1061,7 +1064,7 @@ header #nav nav{
   top: 50%;
   transform: translateY(-53.5%);
   left: 5.9%;
-  width: 25%;
+  width: 27.4%;
 }
 #one-drive-banner .one-drive .one-drive-title h2{
   font-size: 37px;
@@ -1070,13 +1073,13 @@ header #nav nav{
 }
 #one-drive-banner .one-drive .one-drive-title p{
   margin-bottom: 24px;
-  word-break: keep-all;
+  /* word-break: keep-all; */
   word-wrap: break-word;
 }
 #one-drive-banner .one-drive .one-drive-title a{
   display: inline-block;
   padding: 8px 14px;
-  background-color: #0067b8;
+  background-color: #000;
   font-weight: 800;
   color: #fff;
   text-decoration: none;
@@ -1092,7 +1095,7 @@ header #nav nav{
   border: 3px dotted #fff;
 }
 #one-drive-banner .one-drive .one-drive-title a:hover{
-  background-color: #045fa3;
+  box-shadow: 0px .3px .1px rgb(87, 86, 86);
 }
 @media (max-width: 1900px){
   #one-drive-banner{
@@ -1199,21 +1202,21 @@ header #nav nav{
   }
   .card-wrap .business .main-card .card:nth-child(1) .card-body h3,
   .card-wrap .business .main-card .card:nth-child(2) .card-body h3{
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
   }
   .card-wrap .business .main-card .card:nth-child(3) .card-body h3,
   .card-wrap .business .main-card .card:nth-child(4) .card-body h3{
-    margin-bottom: 4px;
+    /* margin-bottom: 4px; */
   }
 }
 @media (max-width: 375px){
   .card-wrap .business h2{
-    margin-bottom: 9px;
+    /* margin-bottom: 9px; */
   }
   .card-wrap .business .main-card .card:nth-child(1) .card-body h3,
   .card-wrap .business .main-card .card:nth-child(3) .card-body h3,
   .card-wrap .business .main-card .card:nth-child(4) .card-body h3{
-    margin-bottom: 4px;
+    /* margin-bottom: 4px; */
   }
   
 }
@@ -1326,7 +1329,7 @@ footer #footer{
 }
 #footer .footer-nav .footer-item h4{
   font-weight: 600;
-  padding: 35px 0 2px;
+  padding: 35px 0 2.5px;
   color: #616161;
   font-size: 15px;
 }
@@ -1474,7 +1477,7 @@ footer #footer{
 }
 @media (max-width: 859px){
   #footer .footer-nav .footer-item h4{
-    padding: 34.5px 0 3px;
+    padding: 35px 0 2.5px;
   }
   #footer .footer-copyright .copyright li:nth-child(5){
     padding: 0 25.5px 4px 1.5px;
