@@ -79,7 +79,9 @@
         }
       },
       mounted() {
-        // this.data = JSON.parse(localStorage.getItem('todo'));
+        if(localStorage.getItem('todo')){
+          this.data = JSON.parse(localStorage.getItem('todo'));
+        }
       },
       methods: {
         add() {
@@ -147,12 +149,12 @@
         }
       },
       watch: {
-        // data: {
-        //   handler() {
-        //     localStorage.setItem('todo', JSON.stringify(this.data));
-        //   },
-        //   deep: true
-        // }
+        data: {
+          handler() {
+            localStorage.setItem('todo', JSON.stringify(this.data));
+          },
+          deep: true
+        }
       }
     }).mount('#app')
   </script>
