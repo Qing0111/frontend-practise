@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>色弱遊戲</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: rgb(134, 126, 126);
+      display: flex;
+      font-family: '微软雅黑';
+    }
+
+    header{
+      width: 80px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 0 15px 0;
+    }
+    .score, .countdown{
+      width: 80px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+    }
+    .countdown{
+      font-size: 30px;
+      font-weight: bold;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      background-color: rgb(145, 137, 137);
+      color: rgb(73, 71, 71);
+    }
+    .pause, .start{
+      width: 80px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      background: #FCAD26;
+      border-radius: 7px;
+      box-shadow: 0 5px #da9622;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    main{
+      width: calc(100% - 80px);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    @media (max-width: 789px){
+      body{
+        flex-direction: column;
+      }
+      header{
+      flex-direction: row;
+      padding: 0;
+      width: 100%;
+      height: 50px;
+      }
+      .count-btn{
+        display: flex;
+        gap: 20px;
+      }
+      main{
+      width: 100%;
+      height: calc(100vh - 50px);
+      }
+
+    }
+    .game-box{
+      padding: 10px;
+      border-radius: 15px;
+      width: 530px;
+      height: 530px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background-color: #fff;
+      
+    }
+    .game-box .inside-box{
+      width: 250px;
+      height: 250px;
+      background-color: cadetblue;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+    .game-box .answer{
+      background-color: aquamarine;
+    }
+
+    .pause-interface, .game-end{
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      text-align: center;
+      padding: 100px;
+      font-size: 35px;
+      background-color: rgba(145, 137, 137, 1);
+      z-index: 3;
+    }
+    .pause-interface h2, .game-end h2{
+      margin-bottom: 30px;
+      color: #ffe2c5;
+      
+    }
+    .pause-interface .btn, .game-end .btn{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      font-size: 20px;
+    }
+    .continue, .reset{
+      background: #FCAD26;
+      border-radius: 7px;
+      box-shadow: 0 5px #da9622;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 20px 40px;
+      cursor: pointer;
+    }
+    .game-end p{
+      color: rgb(110, 55, 16);
+    }
+    .game-end .comment{
+      margin-bottom: 40px;
+    }
+    .prevent-click{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: transparent;
+    }
+    .d-none{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="score">得分: 0</div>
+    <div class="countdown"></div>
+    <div class="count-btn">
+      <div class="start">START</div>
+      <div class="pause d-none">PASUE</div>
+    </div>
+  </header>
+  <main>
+    <div class="game-box">
+      <!-- <div class="inside-box"></div>
+      <div class="inside-box answer"></div>
+      <div class="inside-box"></div>
+      <div class="inside-box"></div> -->
+    </div>
+    <div class="prevent-click"></div>
+  </main>
+  
+  <div class="pause-interface d-none">
+    <h2>遊戲暫停</h2>
+    <div class="btn">
+      <div class="continue">CONTINUE</div>
+      <div class="reset">RESET</div>
+    </div>
+  </div>
+
+  <div class="game-end d-none">
+    <h2>遊戲結束</h2>
+    <p class="final-score"></p>
+    <p class="comment"></p>
+    <div class="btn">
+      <div class="reset">RESET</div>
+    </div>
+  </div>
+
+  <script>
+    const board = document.querySelector('.game-box');
+    const preventClick = document.querySelector('.prevent-click');
+
+    const scoreText = document.querySelector('.score');
+    const countdown = document.querySelector('.countdown');
+    const startBtn = document.querySelector('.start');
+    const pauseBtn = document.querySelector('.pause');
+
+    const pauseInterface = document.querySelector('.pause-interface');
+    const continueBtn = document.querySelector('.continue');
+    const resetBtn = document.querySelector('.pause-interface .reset');
+
+    const gameEnd = document.querySelector('.game-end');
+    const finalScore = document.querySelector('.final-score');
+    const comment = document.querySelector('.comment');
+    const finalReset = document.querySelector('.game-end .reset');
+
+    let score = 0;
+    let timeText = 60;
+    let timerId;
+    countdown.textContent = timeText;
+    // 開始按鈕
+    startBtn.addEventListener('click', function() {
+      preventClick.classList.add('d-none');
+      startBtn.classList.add('d-none');
+      pauseBtn.classList.remove('d-none');
+      timer();
+    });
+
+    //暫停按鈕
+    pauseBtn.addEventListener('click', function() {
+      pauseInterface.classList.remove('d-none');
+      clearInterval(timerId);
+    });
+
+    // 重製按鈕
+    resetBtn.addEventListener('click', function() {
+      pauseInterface.classList.add('d-none');
+      preventClick.classList.remove('d-none');
+      startBtn.classList.remove('d-none');
+      pauseBtn.classList.add('d-none');
+      clearInterval(timerId);
+      gameReset();
+    });
+
+    // 繼續按紐
+    continueBtn.addEventListener('click', function() {
+      pauseInterface.classList.add('d-none');
+      timer();
+    });
+
+    // 結算畫面重製按鈕
+    finalReset.addEventListener('click', function() {
+      gameEnd.classList.add('d-none');
+      preventClick.classList.remove('d-none');
+      startBtn.classList.remove('d-none');
+      pauseBtn.classList.add('d-none');
+      clearInterval(timerId);
+      gameReset();
+    });
+
+    // 等級評論
+    function scoreLevel() {
+      console.log(score);
+      if(score < 9){
+        return '您有認真玩嗎?';
+      }else if(score < 18){
+        return '眼睛不錯喔';
+      }else if(score >= 18 && score < 28){
+        return '您是鷹眼吧';
+      }else{
+        return '你是鬼吧';
+      }
+    }
+    
+    // 計時器
+    function timer(){
+      timerId = setInterval(() => {
+        countdown.textContent = --timeText;
+        if(countdown.textContent == 0){
+          clearInterval(timerId);
+          
+          finalScore.textContent = `分數: ${score} 分`;
+          comment.textContent = `評價: ${scoreLevel()}`
+
+          gameEnd.classList.remove('d-none');
+        }
+      }, 1000);
+    }
+
+    // 重置
+    function gameReset() {
+      countdown.textContent = timeText = 60;
+      scoreText.textContent = `得分: ${score = 0}`;
+      setBoard(1);
+    }
+
+    // 方塊渲染
+    function setBoard(level) {
+      let random = Math.floor(Math.random() * (level+1)**2);
+      let r = Math.floor(Math.random()*100) + 80;
+      let g = Math.floor(Math.random()*100) + 80;
+      let b = Math.floor(Math.random()*100) + 80;
+      let boxSize =  ((510 - (10*level)) / (level+1));
+      console.log(boxSize);
+
+      // 透明度調整
+      function opacity() {
+        if(level/10 >= 0.9){
+          return 0.9;
+        }else{
+          return level/10;
+        }
+      }
+      board.innerHTML = '';
+      for(let i = 0; i < (level+1)**2; i++){
+        if(random == i){
+          board.innerHTML += `<div class="inside-box answer" style="background-color: rgba(${r}, ${g}, ${b}, ${opacity()}); width: ${boxSize}px; height: ${boxSize}px"></div>`;
+          continue ;
+        }
+        board.innerHTML += `<div class="inside-box" style="background-color: rgb(${r}, ${g}, ${b}); width: ${boxSize}px; height: ${boxSize}px"></div>`;
+      }
+
+      const boxes = document.querySelectorAll('.inside-box');
+      boxes.forEach(function(box) {
+        box.addEventListener('click', function() {
+          if(box.classList.contains('answer')){
+
+            score+=1;
+
+            // 遞回函式
+            if(score / 3 == level){
+              setBoard(level+1);
+            }else{
+              setBoard(level);
+            }
+          }else{
+            if(score > 0){
+              score-=1;
+            }
+          }
+          scoreText.textContent = `得分: ${score}`;
+        });
+      });
+    }
+    setBoard(1);
+
+  </script>
+</body>
+</html>

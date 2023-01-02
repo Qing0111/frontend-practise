@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <title>ToDoList</title>
+</head>
+<body class=""  style="background-color: rgb(255, 255, 255);">
+  <div id="app" class="container mt-5">
+    <div class="input-group mb-3">
+      <button type="button" class="input-group-text" id="inputGroup-sizing-default" @click="add">新增資料</button>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" v-model="inputText" @keyup.enter="add"><button type="button" class="btn btn-dark" @click="allDone">全部選取</button><button type="button" class="btn btn-danger" @click="deleteDone">刪除已完成</button>
+    </div>
+
+    <ul class="nav nav-tabs">
+      <template v-for="(item, index) in tab" :key="index">
+        <li class="nav-item">
+          <a class="nav-link text-dark" :class="{'active': item.value == tabState}" aria-current="page" @click="tabState = item.value" href="#">{{ item.name }}</a>
+        </li>
+      </template>
+      <input type="text" class="form-control rounded-0" placeholder="Search" v-model="search">
+    </ul>
+    <table class="table table-dark table-striped table-hover">
+      <thead align='center'>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">已完成</th>
+          <th scope="col">內容</th>
+          <th scope="col">刪除</th>
+        </tr>
+      </thead>
+      <tbody v-for="(item, index) in filterData" :key="index">
+          <tr valign="middle" align='center'>
+            <th scope="row" width="50">{{ index + 1 }}</th>
+            <td width="100">
+              <label :for="item.id" class="w-100">
+                <input type="checkbox" :id="item.id" @click="check(item)" :checked="item.state">
+              </label>
+            </td>
+            <td align="start">
+              <span v-if="!item.edit" @dblclick="editItem(item)" :class="{'text-decoration-line-through': item.state}" class="d-block">{{ item.content }}</span>
+              <div v-else class="input-group">
+                <input type="text" class="form-control" aria-label="Recipient's username with two button addons" v-model="editData.content">
+                <button class="btn btn-outline-secondary" type="button" @click="cancel(item)">取消</button>
+                <button class="btn btn-outline-secondary" type="button" @click="submit(index)">確定</button>
+              </div>
+            </td>
+            <td  width="100"><button type="button" class="btn btn-outline-danger" @click="deleteBtn(index)">刪除</button></td>
+          </tr>
+      </tbody>
+      <tfoot align="right">
+        <tr>
+          <th scope="row" colspan="4">{{ filterUnDone }} 個未完成</th>
+        </tr>
+    </tfoot>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          inputText: '',
+          editData: {},
+          data:[],
+          tab:[
+            {name: '全部', value: 'all'},
+            {name: '未完成', value: 'undone'},
+            {name: '完成', value: 'done'},
+          ],
+          tabState: 'all',
+          search: '',
+        }
+      },
+      mounted() {
+        // this.data = JSON.parse(localStorage.getItem('todo'));
+      },
+      methods: {
+        add() {
+          if(this.inputText == ''){
+            return;
+          }
+          this.data.push({
+            id: new Date().getTime(),
+            content: this.inputText,
+            state: false,
+          });
+          this.inputText = '';
+        },
+        deleteBtn(index) {
+          this.data.splice(index, 1);
+        },
+        check(item) {
+          // let index = this.data.findIndex(thing => thing.id == item.id);
+          // this.data[index].state = !this.data[index].state;
+          item.state = !item.state;
+          console.log(item);
+        },
+        allDone() {
+          this.data.forEach(item => item.state = true);
+        },
+        deleteDone() {
+          this.data = this.data.filter(item => item.state == false);
+        },
+        editItem(item) {
+          if(this.data.filter(item => item.edit == true).length == 1 || item.state == true){
+            return;
+          }
+          item.edit = true;
+          this.editData = {...item};
+        },
+        cancel(item) {
+          item.edit = false;
+        },
+        submit(index) {
+          this.data[index] = this.editData;
+          this.data[index].edit = false; 
+        }
+      },
+      computed: {
+        filterData() {
+          // const regex = new RegExp(this.search.trim(), "gi");
+
+          if(this.tabState == 'done'){
+            let filterItem = this.data.filter(item => item.state == true);
+            return filterItem.filter(item => item.content.match(this.search.trim()));
+            // return filterItem.filter(item => item.content.match(/this.search.trim()/gi));
+          }else if(this.tabState == 'undone'){
+            let filterItem = this.data.filter(item => item.state == false);
+            return filterItem.filter(item => item.content.match(this.search.trim()));
+            // return filterItem.filter(item => item.content.match(/this.search.trim()/gi));
+          }else{
+            let filterItem = this.data;
+            return filterItem.filter(item => item.content.match(this.search.trim()));
+            // return filterItem.filter(item => item.content.match(/this.search.trim()/gi));
+          }
+          
+        },
+        filterUnDone() {
+          return this.data.filter(item => !item.state).length;
+        }
+      },
+      watch: {
+        // data: {
+        //   handler() {
+        //     localStorage.setItem('todo', JSON.stringify(this.data));
+        //   },
+        //   deep: true
+        // }
+      }
+    }).mount('#app')
+  </script>
+</body>
+</html>
