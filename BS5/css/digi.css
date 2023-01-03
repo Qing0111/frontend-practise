@@ -1,0 +1,80 @@
+.b-img {
+  background-image: url("../img/digi.jpg");
+  height: 100vh;
+}
+.b-img .title-page {
+  background-color: rgba(81, 81, 81, 0.5);
+}
+.b-img .title-page .inner-page {
+  height: 100%;
+}
+.b-img .title-page .inner-page h1 {
+  font-size: 48px;
+}
+.b-img .title-page .inner-page p {
+  font-size: 30px;
+  margin: 16px 0;
+  word-wrap: break-word;
+}
+.b-img .login-page {
+  height: 100vh;
+  background-color: rgba(81, 81, 81, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .b-img .login-page {
+    background-color: #162446;
+  }
+}
+.b-img .login-page img {
+  width: 175px;
+}
+@media (min-width: 640px) {
+  .b-img .login-page img {
+    width: 234px;
+  }
+}
+.b-img .login-page div span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  font-size: 18px;
+}
+.b-img .login-page form {
+  margin: 0;
+}
+@media (min-width: 640px) {
+  .b-img .login-page form {
+    margin: 0 16%;
+  }
+}
+.b-img .login-page form div input {
+  background-color: #000;
+}
+.b-img .login-page form div a {
+  text-decoration: none;
+  color: #9ca3af;
+  transition: all 1s;
+}
+.b-img .login-page form div a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+.b-img .login-page form .btn {
+  background-color: #6366f1;
+  transition: background-color 1s;
+  font-size: 18px;
+}
+.b-img .login-page form .btn:hover {
+  background-color: #4f46e5;
+}
+.b-img .login-page form img {
+  width: 24px;
+}/*# sourceMappingURL=digi.css.map */

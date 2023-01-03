@@ -1,0 +1,73 @@
+.btns{
+  background-color: #6366f1;
+  transition: background-color 1s;
+  font-size: 18px;
+}
+.btns:hover{
+  background-color: #4f46e5;
+}
+main{
+
+  .form{
+    p{
+      @media (min-width: 992px) {
+        margin: 0 15%;
+      }
+    }
+    .table-wrap{
+      @media (min-width: 992px) {
+        margin: 0 15%;
+      }
+    }
+    .btn-blue{
+      background-color: #3b82f6;
+      transition: background-color 1s;
+      &:hover{
+        background-color: #2563eb;
+      }
+    }
+  }
+
+
+  .card-wrap{
+    .card{
+      @media (min-width: 992px) {
+        margin: 0 15%;
+      }
+
+      .icon{
+        width: 80px;
+        height: 80px;
+        @media (min-width: 768px) {
+          width: 128px;
+          height: 128px;
+        }
+      }
+    }
+  }
+
+  .big-card{
+    .row{
+      @media (min-width: 992px) {
+        margin: 0 10%;
+      }
+    }
+    .img{
+      height: 256px;
+      
+      @media (min-width: 992px) {
+        height: auto;
+      }
+    }
+  }
+
+  .map{
+    .text{
+      width: 100%;
+      @media (min-width: 768px) {
+        width: 35%;
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,63 @@
+.btns {
+  background-color: #6366f1;
+  transition: background-color 1s;
+  font-size: 18px;
+}
+
+.btns:hover {
+  background-color: #4f46e5;
+}
+
+@media (min-width: 992px) {
+  main .form p {
+    margin: 0 15%;
+  }
+}
+@media (min-width: 992px) {
+  main .form .table-wrap {
+    margin: 0 15%;
+  }
+}
+main .form .btn-blue {
+  background-color: #3b82f6;
+  transition: background-color 1s;
+}
+main .form .btn-blue:hover {
+  background-color: #2563eb;
+}
+@media (min-width: 992px) {
+  main .card-wrap .card {
+    margin: 0 15%;
+  }
+}
+main .card-wrap .card .icon {
+  width: 80px;
+  height: 80px;
+}
+@media (min-width: 768px) {
+  main .card-wrap .card .icon {
+    width: 128px;
+    height: 128px;
+  }
+}
+@media (min-width: 992px) {
+  main .big-card .row {
+    margin: 0 10%;
+  }
+}
+main .big-card .img {
+  height: 256px;
+}
+@media (min-width: 992px) {
+  main .big-card .img {
+    height: auto;
+  }
+}
+main .map .text {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  main .map .text {
+    width: 35%;
+  }
+}/*# sourceMappingURL=index.css.map */
