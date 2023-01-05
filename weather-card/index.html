@@ -117,7 +117,7 @@
       }
       .burger{
         display: flex;
-        font-size: 30px;
+        font-size: 36px;
       }
       .tabs{
         position: absolute;
@@ -212,10 +212,10 @@
     const cards = document.querySelector('.content');
 
     // 漢堡選單開關
-    burger.addEventListener('click', function() {
-      tabGroup.classList.toggle('d-block');
-      clickRemove();
-    });
+    // burger.addEventListener('click', function() {
+    //   tabGroup.classList.toggle('d-block');
+    //   clickRemove();
+    // });
     
     // 當點擊tab移除選單
     // function clickRemove() {
@@ -227,18 +227,18 @@
     //     });
     //   }
     // }
-    // window.addEventListener('click', function(e) {
-    //   // console.log(e.target);
-    //   if(e.target.matches('.fa-bars')){
-    //     tabGroup.classList.toggle('d-block');
-    //   }else if(tabGroup.matches('.d-block')){
-    //     if(e.target.matches('.tab')){
-    //       tabGroup.classList.remove('d-block');
-    //     }else{
-    //       tabGroup.classList.remove('d-block');
-    //     }
-    //   }
-    // });
+    window.addEventListener('click', function(e) {
+      // console.log(e.target);
+      if(e.target.matches('.fa-bars')){
+        tabGroup.classList.toggle('d-block');
+      }else if(tabGroup.matches('.d-block')){
+        if(e.target.matches('.tab')){
+          tabGroup.classList.remove('d-block');
+        }else{
+          tabGroup.classList.remove('d-block');
+        }
+      }
+    });
     
     // 渲染畫面
     function renderData(weatherData) {
