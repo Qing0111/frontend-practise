@@ -212,33 +212,33 @@
     const cards = document.querySelector('.content');
 
     // 漢堡選單開關
-    // burger.addEventListener('click', function() {
-    //   tabGroup.classList.toggle('d-block');
-    //   clickRemove();
-    // });
+    burger.addEventListener('click', function() {
+      tabGroup.classList.toggle('d-block');
+      clickRemove();
+    });
     
     // 當點擊tab移除選單
-    // function clickRemove() {
-    //   if(tabGroup.classList.contains('d-block')){
-    //     tabs.forEach(function(item) {
-    //       item.addEventListener('click', function(e) {
-    //         tabGroup.classList.remove('d-block');
-    //       })
-    //     });
-    //   }
-    // }
-    window.addEventListener('click', function(e) {
-      // console.log(e.target);
-      if(e.target.matches('.ham')){
-        tabGroup.classList.toggle('d-block');
-      }else if(tabGroup.matches('.d-block')){
-        if(e.target.matches('.tab')){
-          tabGroup.classList.remove('d-block');
-        }else{
-          tabGroup.classList.remove('d-block');
-        }
+    function clickRemove() {
+      if(tabGroup.classList.contains('d-block')){
+        tabs.forEach(function(item) {
+          item.addEventListener('click', function(e) {
+            tabGroup.classList.remove('d-block');
+          })
+        });
       }
-    });
+    }
+    // window.addEventListener('click', function(e) {
+    //   // console.log(e.target);
+    //   if(e.target.matches('.ham')){
+    //     tabGroup.classList.toggle('d-block');
+    //   }else if(tabGroup.matches('.d-block')){
+    //     if(e.target.matches('.tab')){
+    //       tabGroup.classList.remove('d-block');
+    //     }else{
+    //       tabGroup.classList.remove('d-block');
+    //     }
+    //   }
+    // });
     
     // 渲染畫面
     function renderData(weatherData) {
