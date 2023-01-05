@@ -1,181 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>天氣小卡</title>
-  <style>
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-      overflow-y : overlay;
-    }
-    body{
-      background-color: burlywood;
-      background-image: url('./img/map.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center;
-      transition: all .3s;
-    }
-    main{
-      padding: 30px;
-    }
-    .header{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 30px;
-    }
-    .header h1{
-      font-size: 35px;
-      color: transparent;
-      background-image: linear-gradient(to right bottom, red, white, red, blue, blue, blue, blue);
-      -webkit-background-clip: text;
-    }
-    .burger{
-      display: none;
-      cursor: pointer;
-    }
-    .tabs{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0 10px;
-    }
-    .tab{
-      padding: 5px 20px;
-      border-radius: 5px;
-      box-shadow: 1px 1px 2px rgb(100, 100, 100);
-      cursor: pointer;
-    }
-    .content{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .card{
-      width: calc(25% - 15px);
-      text-align: center;
-      position: relative;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform .3s;
-    }
-    .card:hover{
-      transform: scale(1.1);
-      z-index: 1;
-      
-    }
-    img{
-      width: 100%;
-      height: 100%;
-      vertical-align: bottom;
-      object-fit: cover;
-    }
-    .text{
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background-color: rgba(78, 78, 78, 0.5);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: aliceblue;
-      transition: all .3s;
-    }
-    .text:hover{
-      background-color: rgba(78, 78, 78, 0.6);
-    }
-    .text .area{
-      font-size: 20px;
-    }
-    .text .temperature{
-      font-size: 35px;
-      margin-bottom: 10px;
-    }
-    .active{
-      background-color:cadetblue;
-      color: #fff;
-      box-shadow: none;
-    }
-
-    @media (max-width: 1000px) {
-      .card{
-        width: calc(33.333% - 13.4px);
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>天氣小卡</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-    }
-    @media (max-width: 767px) {
-      .header{
-        position: relative;
+      html {
+        overflow-y: overlay;
       }
-      .burger{
-        display: inline-block;
-        font-size: 36px;
+      body {
+        background-color: burlywood;
+        background-image: url("./img/map.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        transition: all 0.3s;
       }
-      .tabs{
-        position: absolute;
-        left: -30px;
-        right: -30px;
-        top: calc(100% + 30px);
-        flex-direction: column;
-        z-index: 1;
-        gap: 0;
-        background-color: rgba(222, 184, 135, .9);
-        transition: all .5s;
+      main {
+        padding: 30px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      .header h1 {
+        font-size: 35px;
+        color: transparent;
+        background-image: linear-gradient(
+          to right bottom,
+          red,
+          white,
+          red,
+          blue,
+          blue,
+          blue,
+          blue
+        );
+        -webkit-background-clip: text;
+      }
+      .burger {
         display: none;
+        cursor: pointer;
       }
-      .tab{
-        border-radius: 0;
-        box-shadow: none;
-        border-bottom: 1px solid rgb(100, 98, 98);
-        padding: 15px 10px;
+      .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 10px;
+      }
+      .tab {
+        padding: 5px 20px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px rgb(100, 100, 100);
+        cursor: pointer;
+      }
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .card {
+        width: calc(25% - 15px);
         text-align: center;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s;
       }
-      .tab:first-child{
-        border-top: 1px solid rgb(100, 98, 98);
+      .card:hover {
+        transform: scale(1.1);
+        z-index: 1;
       }
-      .card{
-        width: calc(50% - 10px);
-      }
-      .card:hover{
-        transform: scale(1);
-        z-index: 0;
-      }
-    }
-    @media (max-width: 576px) {
-      .card{
+      img {
         width: 100%;
+        height: 100%;
+        vertical-align: bottom;
+        object-fit: cover;
       }
-    }
-    
-    .d-block{
-      display: block;
-    }
+      .text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(78, 78, 78, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        transition: all 0.3s;
+      }
+      .text:hover {
+        background-color: rgba(78, 78, 78, 0.6);
+      }
+      .text .area {
+        font-size: 20px;
+      }
+      .text .temperature {
+        font-size: 35px;
+        margin-bottom: 10px;
+      }
+      .active {
+        background-color: cadetblue;
+        color: #fff;
+        box-shadow: none;
+      }
+
+      @media (max-width: 1000px) {
+        .card {
+          width: calc(33.333% - 13.4px);
+        }
+      }
+      @media (max-width: 767px) {
+        .header {
+          position: relative;
+        }
+        .burger {
+          display: inline-block;
+          font-size: 36px;
+        }
+        .tabs {
+          position: absolute;
+          left: -30px;
+          right: -30px;
+          top: calc(100% + 30px);
+          flex-direction: column;
+          z-index: 1;
+          gap: 0;
+          background-color: rgba(222, 184, 135, 0.9);
+          transition: all 0.5s;
+          display: none;
+        }
+        .tab {
+          border-radius: 0;
+          box-shadow: none;
+          border-bottom: 1px solid rgb(100, 98, 98);
+          padding: 15px 10px;
+          text-align: center;
+        }
+        .tab:first-child {
+          border-top: 1px solid rgb(100, 98, 98);
+        }
+        .card {
+          width: calc(50% - 10px);
+        }
+        .card:hover {
+          transform: scale(1);
+          z-index: 0;
+        }
+      }
+      @media (max-width: 576px) {
+        .card {
+          width: 100%;
+        }
+      }
+
+      .d-block {
+        display: block;
+      }
     </style>
-</head>
-<body>
-  <main>
-    <section class="header">
-      <h1>天氣預報</h1>
-      <div class="burger"><i class="fa-solid fa-bars ham"></i></div>
-      <div class="tabs">
-        <div class="tab active" data-area="all">全部</div>
-        <div class="tab" data-area="north">北部</div>
-        <div class="tab" data-area="mid">中部</div>
-        <div class="tab" data-area="south">南部</div>
-        <div class="tab" data-area="east">東部</div>
-        <div class="tab" data-area="oversea">離島</div>
-      </div>
-    </section>
-    <section class="content">
-      <!-- <div class="card">
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <h1>天氣預報</h1>
+        <div class="burger"><i class="fa-solid fa-bars ham"></i></div>
+        <div class="tabs">
+          <div class="tab active" data-area="all">全部</div>
+          <div class="tab" data-area="north">北部</div>
+          <div class="tab" data-area="mid">中部</div>
+          <div class="tab" data-area="south">南部</div>
+          <div class="tab" data-area="east">東部</div>
+          <div class="tab" data-area="oversea">離島</div>
+        </div>
+      </section>
+      <section class="content">
+        <!-- <div class="card">
         <img src="./img/sun.jpg" alt="">
         <div class="text">
           <div class="area">台中市</div>
@@ -183,68 +191,74 @@
           <div class="weather">晴天</div>
         </div>
       </div> -->
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <script src="https://kit.fontawesome.com/e35371b1f0.js" crossorigin="anonymous"></script>
-  <script>
-    let weatherData = [];
-    let northArea = [];
-    let midArea = [];
-    let southArea = [];
-    let eastArea = [];
-    let overseaArea = [];
-    
-    fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-8D16676E-55B5-4C88-A449-E3A627C1158C')
-      .then(function(response) {
-        return response.json();
-      }).then(function(data) {
-        weatherData = data.records.location;
-        takeWeather();
-        takeArea();
-        renderData(weatherData);
+    <script
+      src="https://kit.fontawesome.com/e35371b1f0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let weatherData = [];
+      let northArea = [];
+      let midArea = [];
+      let southArea = [];
+      let eastArea = [];
+      let overseaArea = [];
+
+      fetch(
+        "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-8D16676E-55B5-4C88-A449-E3A627C1158C"
+      )
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          weatherData = data.records.location;
+          takeWeather();
+          takeArea();
+          renderData(weatherData);
+        });
+
+      const body = document.querySelector("body");
+      const tabGroup = document.querySelector(".tabs");
+      const burger = document.querySelector(".burger");
+      const tabs = document.querySelectorAll(".tabs .tab");
+      const cards = document.querySelector(".content");
+
+      // 漢堡選單開關
+      burger.addEventListener("click", function () {
+        tabGroup.classList.toggle("d-block");
+        clickRemove();
       });
 
-    const body = document.querySelector('body');
-    const tabGroup = document.querySelector('.tabs');
-    const burger = document.querySelector('.burger')
-    const tabs = document.querySelectorAll('.tabs .tab');
-    const cards = document.querySelector('.content');
-
-    // 漢堡選單開關
-    burger.addEventListener('click', function() {
-      tabGroup.classList.toggle('d-block');
-      clickRemove();
-    });
-    
-    // 當點擊tab移除選單
-    function clickRemove() {
-      if(tabGroup.classList.contains('d-block')){
-        tabs.forEach(function(item) {
-          item.addEventListener('click', function(e) {
-            tabGroup.classList.remove('d-block');
-          })
-        });
+      // 當點擊tab移除選單
+      function clickRemove() {
+        if (tabGroup.classList.contains("d-block")) {
+          tabs.forEach(function (item) {
+            item.addEventListener("click", function (e) {
+              tabGroup.classList.remove("d-block");
+            });
+          });
+        }
       }
-    }
-    // window.addEventListener('click', function(e) {
-    //   // console.log(e.target);
-    //   if(e.target.matches('.ham')){
-    //     tabGroup.classList.toggle('d-block');
-    //   }else if(tabGroup.matches('.d-block')){
-    //     if(e.target.matches('.tab')){
-    //       tabGroup.classList.remove('d-block');
-    //     }else{
-    //       tabGroup.classList.remove('d-block');
-    //     }
-    //   }
-    // });
-    
-    // 渲染畫面
-    function renderData(weatherData) {
-      let str = '';
-      weatherData.forEach(item => {
-        str += `
+      // window.addEventListener('click', function(e) {
+      //   // console.log(e.target);
+      //   if(e.target.matches('.ham')){
+      //     tabGroup.classList.toggle('d-block');
+      //   }else if(tabGroup.matches('.d-block')){
+      //     if(e.target.matches('.tab')){
+      //       tabGroup.classList.remove('d-block');
+      //     }else{
+      //       tabGroup.classList.remove('d-block');
+      //     }
+      //   }
+      // });
+
+      // 渲染畫面
+      function renderData(weatherData) {
+        let str = "";
+        weatherData.forEach((item) => {
+          str += `
         <div class="card">
           <img src="${item.weatherElement[0].img}" alt="">
           <div class="text">
@@ -256,85 +270,102 @@
           </div>
         </div>
         `;
+        });
+        cards.innerHTML = str;
+      }
+
+      // 判斷天氣
+      function takeWeather() {
+        weatherData.forEach((item) => {
+          let climate = item.weatherElement[0].time[1].parameter.parameterName;
+
+          if (climate.includes("陰天")) {
+            item.weatherElement[0].img = "./img/cloudyDay.jpg";
+            item.weatherElement[0].comment = "出門記得帶雨傘";
+          } else if (climate.includes("雲")) {
+            item.weatherElement[0].img = "./img/cloud.jpg";
+            item.weatherElement[0].comment = "天氣舒適，適合出去走走";
+          }
+          if (climate.includes("晴時多雲")) {
+            item.weatherElement[0].img = "./img/sun.jpg";
+            item.weatherElement[0].comment = "出門記得擦防曬";
+          } else if (climate.includes("雨")) {
+            item.weatherElement[0].img = "./img/rain.jpg";
+            item.weatherElement[0].comment = "沒事不要出門";
+          }
+        });
+      }
+
+      // 分地區
+      function takeArea() {
+        weatherData.forEach((item) => {
+          let city = item.locationName;
+
+          if (
+            city.includes("北") ||
+            city.includes("基隆") ||
+            city.includes("新竹") ||
+            city.includes("桃園") ||
+            city.includes("宜蘭")
+          ) {
+            northArea.push(item);
+          } else if (
+            city.includes("中") ||
+            city.includes("苗栗") ||
+            city.includes("彰化") ||
+            city.includes("南投") ||
+            city.includes("雲林")
+          ) {
+            midArea.push(item);
+          } else if (
+            city.includes("臺南") ||
+            city.includes("高雄") ||
+            city.includes("嘉義") ||
+            city.includes("屏東")
+          ) {
+            southArea.push(item);
+          } else if (city.includes("花蓮") || city.includes("臺東")) {
+            eastArea.push(item);
+          } else if (
+            city.includes("澎湖") ||
+            city.includes("金門") ||
+            city.includes("連江")
+          ) {
+            overseaArea.push(item);
+          }
+        });
+      }
+
+      tabs.forEach(function (item) {
+        item.addEventListener("click", function () {
+          if (this.classList.contains("active")) {
+            return;
+          }
+          tabs.forEach((item) => item.classList.remove("active"));
+          this.classList.add("active");
+
+          // 判斷各區並渲染
+          if (this.dataset.area == "all") {
+            body.style.backgroundImage = "url('./img/map.png')";
+            renderData(weatherData);
+          } else if (this.dataset.area == "north") {
+            body.style.backgroundImage = "url('./img/mapNorth.png')";
+            renderData(northArea);
+          } else if (this.dataset.area == "mid") {
+            body.style.backgroundImage = "url('./img/mapMid.png')";
+            renderData(midArea);
+          } else if (this.dataset.area == "south") {
+            body.style.backgroundImage = "url('./img/mapSouth.png')";
+            renderData(southArea);
+          } else if (this.dataset.area == "east") {
+            body.style.backgroundImage = "url('./img/mapEast.png')";
+            renderData(eastArea);
+          } else {
+            body.style.backgroundImage = "url('./img/mapOversea.png')";
+            renderData(overseaArea);
+          }
+        });
       });
-      cards.innerHTML = str;
-    }
-
-    // 判斷天氣
-    function takeWeather() {
-      weatherData.forEach((item) => {
-        let climate = item.weatherElement[0].time[1].parameter.parameterName;
-
-        if(climate.includes('陰天')){
-          item.weatherElement[0].img = './img/cloudyDay.jpg';
-          item.weatherElement[0].comment = '出門記得帶雨傘';
-        }else if(climate.includes('雲')){
-          item.weatherElement[0].img = './img/cloud.jpg';
-          item.weatherElement[0].comment = '天氣舒適，適合出去走走';
-        }
-        if(climate.includes('晴時多雲')){
-          item.weatherElement[0].img = './img/sun.jpg';
-          item.weatherElement[0].comment = '出門記得擦防曬';
-        }else if(climate.includes('雨')){
-          item.weatherElement[0].img = './img/rain.jpg';
-          item.weatherElement[0].comment = '沒事不要出門';
-        }
-      });
-    }
-
-    // 分地區
-    function takeArea() {
-      weatherData.forEach((item) => {
-        let city = item.locationName;
-
-        if(city.includes('北') || city.includes('基隆') || city.includes('新竹') || city.includes('桃園') || city.includes('宜蘭')) {
-          northArea.push(item);
-        }else if(city.includes('中') || city.includes('苗栗') || city.includes('彰化') || city.includes('南投') || city.includes('雲林')) {
-          midArea.push(item);
-        }else if(city.includes('臺南') || city.includes('高雄') || city.includes('嘉義') || city.includes('屏東')) {
-          southArea.push(item);
-        }else if(city.includes('花蓮') || city.includes('臺東')) {
-          eastArea.push(item);
-        }else if(city.includes('澎湖') || city.includes('金門') || city.includes('連江')) {
-          overseaArea.push(item);
-        }
-      });
-    }
-
-    
-    tabs.forEach(function(item) {
-      item.addEventListener('click', function() {
-        
-        if(this.classList.contains('active')){
-          return;
-        }
-        tabs.forEach(item => item.classList.remove('active'));
-        this.classList.add('active');
-
-        // 判斷各區並渲染
-        if(this.dataset.area == 'all') {
-          body.style.backgroundImage = "url('./img/map.png')";
-          renderData(weatherData);
-        }else if(this.dataset.area == 'north') {
-          body.style.backgroundImage = "url('./img/mapNorth.png')";
-          renderData(northArea);
-        }else if(this.dataset.area == 'mid') {
-          body.style.backgroundImage = "url('./img/mapMid.png')";
-          renderData(midArea);
-        }else if(this.dataset.area == 'south') {
-          body.style.backgroundImage = "url('./img/mapSouth.png')";
-          renderData(southArea);
-        }else if(this.dataset.area == 'east') {
-          body.style.backgroundImage = "url('./img/mapEast.png')";
-          renderData(eastArea);
-        }else{
-          body.style.backgroundImage = "url('./img/mapOversea.png')";
-          renderData(overseaArea);
-        }
-      });
-    });
-    
-
-  </script>
-</body>
+    </script>
+  </body>
 </html>
