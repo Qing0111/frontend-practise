@@ -116,7 +116,7 @@
         position: relative;
       }
       .burger{
-        display: flex;
+        display: inline-block;
         font-size: 36px;
       }
       .tabs{
@@ -164,7 +164,7 @@
   <main>
     <section class="header">
       <h1>天氣預報</h1>
-      <div class="burger"><i class="fa-solid fa-bars"></i></div>
+      <div class="burger"><i class="fa-solid fa-bars ham"></i></div>
       <div class="tabs">
         <div class="tab active" data-area="all">全部</div>
         <div class="tab" data-area="north">北部</div>
@@ -229,7 +229,7 @@
     // }
     window.addEventListener('click', function(e) {
       // console.log(e.target);
-      if(e.target.matches('.fa-bars')){
+      if(e.target.matches('.ham')){
         tabGroup.classList.toggle('d-block');
       }else if(tabGroup.matches('.d-block')){
         if(e.target.matches('.tab')){
